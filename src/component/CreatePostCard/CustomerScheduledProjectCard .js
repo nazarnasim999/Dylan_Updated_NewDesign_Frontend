@@ -173,7 +173,7 @@ const CustomerScheduledProjectCard = () => {
             
         {/* <button onClick={openPopup}>Picked Vendors</button> */}
         
-        {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Landscaping").slice(0, 3).map((e, i) => (
+        {/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Landscaping").slice(0, 3).map((e, i) => (
     // Render logic for the first three entries with selected_queries equal to "Landscaping"
     <div>
 
@@ -297,11 +297,11 @@ const CustomerScheduledProjectCard = () => {
 
     </Stack>
     </div>
-))}
+))} */}
 
 
 
-{get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Cleaning").slice(0, 3).map((e, i) => (
+{/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Cleaning").slice(0, 3).map((e, i) => (
     // Render logic for the first three entries with selected_queries equal to "Landscaping"
     <div>
 
@@ -431,7 +431,7 @@ const CustomerScheduledProjectCard = () => {
 
     </Stack>
     </div>
-))}
+))} */}
 
 
 
@@ -566,7 +566,7 @@ const CustomerScheduledProjectCard = () => {
 ))}
 
 
-{get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Cleaning").map((e, i) => (
+{/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Cleaning").map((e, i) => (
     // Render logic for the entries with selected_queries not equal to "Landscaping"
 
     <div>
@@ -691,7 +691,7 @@ const CustomerScheduledProjectCard = () => {
     </Stack>
     </div>
 
-))}
+))} */}
 
 
 </div>
