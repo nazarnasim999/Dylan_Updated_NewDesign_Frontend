@@ -1725,6 +1725,10 @@ input.inputStyle {
     height: 190px !important;
     padding: 15px 10px !important;
 }
+
+.screen_position_container .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-4.css-805qnm-MuiGrid-root {
+    margin-top: 100px !important;
+}
 }
 
 @media screen and (max-width: 600px){
