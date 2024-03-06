@@ -866,6 +866,7 @@ ol.carousel-indicators {
     width: 100%;
     display: flex;
     align-items: center;
+    padding-top: 30px !important;
 }
 
 .admin-logo-body img {
@@ -1262,7 +1263,8 @@ img.setting-button {
 }
 
 .admin-imger-body {
-    padding-top: 70px;
+    padding-top: 100px;
+    width: 80% !important;
 }
 
 .admin-imger-body p {
@@ -1270,7 +1272,7 @@ img.setting-button {
 }
 
 .sidebar-admin {
-    width: 32%;
+    width: 28%;
 }
 
 .hello-admin {
@@ -1365,9 +1367,11 @@ button.showpickedvendor {
     }
     
     .admin-imger-body {
-        padding-top: 50px;
+        padding-top: 130px !important;
     }
-    
+    .admin-logo-body img {
+        width: 25%;
+    }
     .admin-imger-body p {
         font-size: 16px;
     }
@@ -1386,6 +1390,23 @@ button.showpickedvendor {
     
     .admin-imger-body img {
         width: 90%;
+    }
+
+    .space_between_class .MuiStack-root.css-1crsczn-MuiStack-root {
+        font-size: 30px !important;
+    }
+    
+    .space_between_class .MuiStack-root.css-1myj4wh-MuiStack-root {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 1366px){
+    .admin-imger-body {
+        padding-top: 185px !important;
     }
 }
 
@@ -1575,6 +1596,31 @@ button.showpickedvendor {
 .classname-547 .MuiStack-root.css-prgha9-MuiStack-root {
     height: 190px !important;
     padding: 15px 10px !important;
+}
+
+.Admin_expert_slider {
+    width: 100%!important;
+}
+
+.space_between_class .MuiStack-root.css-1crsczn-MuiStack-root {
+    font-size: 24px !important;
+}
+
+img.img_control {
+    height: 50vh !important;
+    min-height: 50vh !important;
+    max-height: 50vh !important;
+    width: 40% !important;
+    min-width: 40% !important;
+    max-width: 40% !important;
+}
+
+.admin-imger-body {
+    padding-top: 50px !important;
+}
+
+.sidebar-admin {
+    width: 48%;
 }
 }
 
@@ -2461,5 +2507,19 @@ select#dropdown {
 }
 .classname-568 {
     height: 500px !important;
+}
+
+
+.hello-ahti {
+    width: 100%;
+
+    padding-left: 0px !important;
+
+}
+.sidebar-admin {
+    width: 100%;
+}
+.hello-admin {
+    padding: 0px 15px 25px 15px;
 }
 }
