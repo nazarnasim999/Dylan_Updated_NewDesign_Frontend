@@ -286,7 +286,8 @@ const CustomerScheduledProjectCard = () => {
 
                 <div>
                     {console.log(e.NumberofInstallmentsMatching, "numberofinstallments")}
-                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments ?
+                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments && e.status ==="accepted"?
+                        
                         (
                             <InstallmentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} number={e.NumberofInstallmentsMatching} />
                         ) : (null)}
@@ -420,7 +421,8 @@ const CustomerScheduledProjectCard = () => {
 
                 <div>
                     {console.log(e.NumberofInstallmentsMatching, "numberofinstallments")}
-                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments ?
+                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments  && e.status ==="accepted"?
+                        
                         (
                             <InstallmentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} number={e.NumberofInstallmentsMatching} />
                         ) : (null)}
@@ -442,7 +444,7 @@ const CustomerScheduledProjectCard = () => {
 
 
 
-{get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Landscaping").map((e, i) => (
+{get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Landscaping" &&  e.customerJobDetails.selected_queries !== "Cleaning").map((e, i) => (
     // Render logic for the entries with selected_queries not equal to "Landscaping"
 
     <div>
@@ -522,7 +524,7 @@ const CustomerScheduledProjectCard = () => {
                             <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat Now" />
                         ) : (
                             <>
-                                {e.Paystatus === "Payment Created" && (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
+                                {e.Paystatus === "Payment Created" &&  (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
                                     <PaymentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} shedule_id={e.scheduleId} job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                 )}
                                 <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat Now" />
@@ -551,7 +553,7 @@ const CustomerScheduledProjectCard = () => {
 
                 <div>
                     {console.log(e.NumberofInstallmentsMatching, "numberofinstallments")}
-                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments ?
+                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments   && e.status ==="accepted"?
                         (
                             <InstallmentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} number={e.NumberofInstallmentsMatching} />
                         ) : (null)}
@@ -566,132 +568,6 @@ const CustomerScheduledProjectCard = () => {
 ))}
 
 
-{/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Cleaning").map((e, i) => (
-    // Render logic for the entries with selected_queries not equal to "Landscaping"
-
-    <div>
-
-
-    <Stack key={i} sx={{ backgroundColor: '#FFFFFF', p: 1, borderRadius: "10px", position: 'relative', mt: 1 }} 
-    
-    
-    className='classname-442 customer_shedule1    notpicked'>
-
-
-
-        <Stack className='classname-443 backimage'>
-            <div style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #002758' }}>
-                <Stack sx={{ fontSize: 24, color: '#002758', fontWeight: 'bold' }} className='classname-444 customer_shedule3'>{e.Name}</Stack>
-            </div>
-            <Stack flexDirection={'row'} alignItems={'center'} mt={0.5} className='classname-445 customer_shedule10'>
-                <Stack className='classname-446 customer_shedule11'>
-                    <IoLocationSharp size={22} color={user_color} />
-                </Stack>
-                <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-447 customer_shedule12'>{e.Home_Address}</Stack>
-            </Stack>
-            <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} mt={1} className='classname-448 customer_shedule13'>
-                <Stack flexDirection={'row'} alignItems={'center'} gap={0.3} className='classname-449 customer_shedule14'>
-                    <Stack className='classname-450 customer_shedule15'>
-                        <GoClock size={22} color={user_color} />
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-451 customer_shedule16'>{e.time ? formatTime(e.time) : '00:00'}</Stack>
-                </Stack>
-            </Stack>
-            <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} mt={1} className='classname-452 customer_shedule20'>
-                <Stack flexDirection={'row'} alignItems={'center'} gap={0.3} className='classname-453 customer_shedule21'>
-                    <Stack className='classname-454 customer_shedule21'>
-                        <GoClock size={22} color={user_color} className='classname-455 customer_shedule22' />
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-456 customer_shedule23'>{e.date === '2000-01-01' ? '---' : formatDate(e.date)}</Stack>
-                </Stack>
-            </Stack>
-            <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} mt={1} className='classname-457 customer_shedule24'>
-                <Stack flexDirection={'row'} alignItems={'center'} gap={0.3} className='classname-458 customer_shedule25'>
-                    <Stack className='classname-459 customer_shedule26'>
-                        <IoLocationSharp size={22} color={user_color} />
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-460 customer_shedule27'>
-                        Status:
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} className='classname-461 customer_shedule28'>{e.status}</Stack>
-                </Stack>
-            </Stack>
-            <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} mt={1} className='classname-462 customer_shedule29'>
-                <Stack flexDirection={'row'} alignItems={'center'} gap={0.3} className='classname-463 customer_shedule30'>
-                    <Stack className='classname-464 customer_shedule31'>
-                        <IoLocationSharp size={22} color={user_color} />
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-465 customer_shedule32'>
-                        Note:
-                    </Stack>
-                    <Stack sx={{ fontSize: 18, color: '#002758' }} className='classname-466 customer_shedule33'>{e.shedule_descriptions ? e.shedule_descriptions : '--'}</Stack>
-                </Stack>
-            </Stack>
-            <Stack sx={{ flexDirection: 'row', alignItems: 'start', justifyContent: 'space-between', marginTop: '10px' }} className='classname-467 customer_shedule2'>
-                {e.status === "pending" ? (
-                    <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'flex-end'} textAlign={'end'} gap={0.2} marginTop={'10px'} className='classname-468 customer_shedule4'>
-                        <img
-                            onClick={() => AcceptHanlde(e.scheduleId)}
-                            style={{ backgroundColor: '#01BAF2', color: 'white', padding: '', width: '120px', height: '40px', alignItems: 'center', textAlign: 'center', borderRadius: '5px', cursor: 'pointer' }}
-                            src={FaCheck}
-                            className='classname-469 customer_shedule5'
-                        />
-                        <Stack className='classname-470 customer_shedule6' onClick={() => RejectHanlde(e.scheduleId)} style={{ backgroundColor: 'transparent', color: 'white', padding: '3px', width: '120px', height: '40px', alignItems: 'center', textAlign: 'center', borderRadius: '5px', cursor: 'pointer', border: '1px solid #01BAF2' }}>
-                            <img src={cross} />
-                        </Stack>
-                    </Stack>
-                ) : (
-                    <Stack className='classname-471 customer_shedule7'>
-                        {e.Paystatus === "Paid" && e.scheduleId === e.scheduleId ? (
-                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat Now" />
-                        ) : (
-                            <>
-                                {e.Paystatus === "Payment Created" && (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
-                                    <PaymentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} shedule_id={e.scheduleId} job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
-                                )}
-                                <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat Now" />
-                            </>
-                        )}
-                    </Stack>
-                )}
-
-
-
-<div>
-                                        {console.log(e.Paystatus,"payment ")}
-
-                                        { (e.Paystatus === "Paid" && e.ReviewPosted ==! "Yes") ?
-                                        (   
-                                            
-                                    
-
-                                                <ReviewModal shedule_id={e.scheduleId}  job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
-                                        
-
-                                        ):(null)
-                                        
-                                        }
-                                            
-                                        </div>
-
-
-
-
-                <div>
-                    {console.log(e.NumberofInstallmentsMatching, "numberofinstallments")}
-                    {e.NumberofInstallmentsMatching <= e.NumberofInstallments ?
-                        (
-                            <InstallmentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} number={e.NumberofInstallmentsMatching} />
-                        ) : (null)}
-                </div>
-            </Stack>
-        </Stack>
-
-
-    </Stack>
-    </div>
-
-))} */}
 
 
 </div>

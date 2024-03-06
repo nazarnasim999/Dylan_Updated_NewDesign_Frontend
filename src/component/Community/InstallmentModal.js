@@ -41,7 +41,7 @@ const style = {
 };
 
 export default function InstallmentModal({ get_schedule_data, parent_check_status, save_index, set_selected_index ,number}) {
-  const stripePromise = loadStripe('pk_test_51ONGSUJf5CYoJPVsmhVV5W3GMEu0dVMj0RVrroS6aISJLVGYrMLe1D7LziLXPY3WgLsJRZOprKbUQzCb2kbVHWMm00dDxogEMK');
+  const stripePromise = loadStripe('pk_test_51ON5LdEN3YLdh4I948W834ytPcQZSo2Tbzv5qeXnxhY0Dn17NO38qnPTftybqXyt0IW1JBd6SERgV42fzcPdNegl00GVHgIKnx');
 
   const theme = useTheme();
   const dispatch = useDispatch()
@@ -81,9 +81,17 @@ export default function InstallmentModal({ get_schedule_data, parent_check_statu
         // color={theme.text_color}
         // padding="10px 20px 10px 20px"
         style={{
-            backgroundColor: 'red',
-            color: "white",
-            padding: "5px 20px 5px 20px"
+          borderRadius: '5px',
+          backgroundColor: '#01BAF2',
+          border: 'none',
+          outline: 'none',
+          color: 'white',
+          fontSize: '15px',
+          cursor: 'pointer',
+          padding: '3px',
+          width: '120px',
+          height: '40px',
+          fontWeight: 'bold'
         }}
         // title={`Pay Installment ${number}`}
         title={`Pay Installment ${number}`}

@@ -833,6 +833,18 @@ ol.carousel-indicators {
     align-items: center;
     justify-content: space-between;
     padding-left: 70px !important;
+    background-image: url(/src/assets/new/back.png);
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    background-size: 1800px;
+}
+
+.Admin_expert_slider{
+    background-image: url(/src/assets/new/back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 800px !important;
+    
 }
 
 .sidebar-admin {

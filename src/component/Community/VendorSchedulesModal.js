@@ -361,7 +361,7 @@ else {
       const messageData = {
         sender: storedUserId, // Assuming storedUserId is the vendorId
         receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
-        message: `Payment created successfully. Cost: ${data.FullInstallmentCost}, Duration: ${data.NumberofInstallments}`, 
+        message: `Payment created successfully. Cost: ${obj.FullInstallmentCost}, Number of Installments: ${obj.NumberofInstallments}`, 
       };
     
       // Emit chat message event with sender, receiver, and message
@@ -373,6 +373,61 @@ else {
 
 
   };
+
+
+
+  const submitHandles1 = () => {
+
+   
+    InstallmentPerMonth = cost/inst;
+
+    console.log(InstallmentPerMonth,"ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
+
+    // setinstAmt(InstallmentPerMonth);
+
+
+
+if (inst>4){
+
+  toast.error("Installments cannot be more than 4")
+}
+
+else {
+
+
+  
+
+    let obj = {
+      vendorId: storedUserId,
+      customerId: receivedObject._id,
+      InstallmentPerMonth:InstallmentPerMonth,
+      FullInstallmentCost: parseInt(cost),
+      NumberofInstallments:parseInt(inst),
+     
+      ...data
+    }
+      dispatch(create_payment_async_service(obj));
+
+      const messageData = {
+        sender: storedUserId, // Assuming storedUserId is the vendorId
+        receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
+        message: `Payment created successfully. Cost: ${data.cost}, Duration: ${data.duration}`, 
+      };
+    
+      // Emit chat message event with sender, receiver, and message
+      socket.emit('send_message', messageData);
+
+   
+    }
+
+
+
+  };
+
+
+
+
+
   useEffect(() => {
     if (create_schedule_status === asyncStatus.SUCCEEDED) {
       handleClose();
@@ -418,7 +473,7 @@ else {
       }}
         onClick={handleOpens}
       >
-        Charge the Customer
+        Create a Quote
       </button>
 
       <button style={{
@@ -880,14 +935,14 @@ else {
               }}
             >
               {" "}
-              Enter Payment Details
+              Enter Quote
             </Stack>
           </Stack>
           <Stack alignItems={'center'}>
        
        <TextField
        className="create_payment"
-         label="Job Duration"
+         label="Job Details"
          variant="outlined"
          fullWidth
          name="duration"
@@ -979,7 +1034,8 @@ else {
             // width:'30%'
 
           }}
-            onClick={submitHandles}
+            onClick={submitHandles1}
+            className="Quote_accept_button"
           >
             Sumbit
           </button>
@@ -1150,7 +1206,7 @@ else {
 
       {/* Create a quote Logic */}
 
-      <Modal
+      {/* <Modal
         disableScrollLock
         open={quotetopen}
         className="scroll-remove"
@@ -1163,7 +1219,7 @@ else {
             ...style,
             width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
             height: { md: "50%", lg: "50%", sm: "80%", xs: "70%" },
-            // height: { md: "70%", lg: "70%", sm: "50%", xs: "auto" },
+          
             overflowY: "scroll",
           }}
           className="scroll_content scroll-remove"
@@ -1207,26 +1263,7 @@ else {
     </div>
               </Stack>
 
-       {/* <TextField
-       className="create_payment"
-         label="Quote"
-         variant="outlined"
-         fullWidth
-         name="duration"
-        //  value={data.installments}
-         onChange= {(e)=>(setinst(e.target.value))}
-         sx={{
-           '& .MuiInput-root': {
-             borderBottom: '1px solid black', // Border only at the bottom
-             borderTop: 'none', // No top border
-             borderLeft: 'none', // No left border
-             borderRight: 'none', // No right border
-           },
-           '&:hover .MuiInput-root': {
-             borderBottom: '2px solid black', // Increase border thickness on hover
-           },
-         }}
-       /> */}
+    
      <br/>
        <br/>
 
@@ -1239,11 +1276,10 @@ else {
             >
               {receivedObject.Budget}
             </Stack>
-          {/* =============== Customer Budget  ============ */}
-          {/* ===============Budget  ============ */}
+        
           <Stack flexDirection={'row'} alignItems={'center'} gap={1.5} >
           </Stack>
-          {/* <br/> */}
+      
           <Stack alignItems={'center'}>
           <button style={{
             backgroundColor: vendor_color,
@@ -1254,7 +1290,7 @@ else {
             color: 'white',
             fontSize: '16px',
             marginTop: '30px',
-            // width:'30%'
+      
           }}
             onClick={submitHandleQuote}
           >
@@ -1263,7 +1299,7 @@ else {
           </Stack>
         </Box>
       </Modal>
-
+ */}
 
 
 

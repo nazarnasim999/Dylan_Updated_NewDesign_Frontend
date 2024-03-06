@@ -93,11 +93,13 @@ export function InstallmentCheckoutForm({ get_schedule_data_nested, get_status_f
             console.error('Payment failed:', error.message);
         } else if (paymentIntent.status === 'succeeded') {
             console.log('Payment succeeded!');
+            handle_date()
             get_status_from_api(paymentIntent.status)
             const messageData = {
                 sender: get_schedule_data_nested?.customerId, // Assuming storedUserId is the vendorId
                 receiver: get_schedule_data_nested?.vendorId, // Assuming receivedObject._id is the customerId
                 message: 'Payment send successfully', 
+
               };
             
               // Emit chat message event with sender, receiver, and message
@@ -127,19 +129,19 @@ export function InstallmentCheckoutForm({ get_schedule_data_nested, get_status_f
     };
 
     return (
-<form onSubmit={handleSubmit} style={{ padding: '10px' }} className="unique-class-72">
-    {/* Add your additional fields here */}
-    <h2 style={{ marginBottom: '20px', color: user_color, fontWeight: 'bold', fontFamily: 'Rajdhani' }} className="unique-class-73">Pay With Stripe</h2>
-
-    <label style={{ color: user_color, fontFamily: 'Rajdhani' }} className="unique-class-74">
-        Enter Card Details
-        <CardElement className="unique-class-75" />
-    </label>
-
-    <button style={{ padding: '10px', borderRadius: '10px', background: user_color, width: '100%', color: 'white', border: "none", outline: "none", marginTop: '30px' }} type="submit" disabled={!stripe} onClick={stripe && handle_date} className="unique-class-76">
-        Pay Installment
-    </button>
-</form>
+<form onSubmit={handleSubmit} style={{ padding: '10px', width:'80%' }} className="unique-class-78">
+                {/* Add your additional fields here */}
+                <h2 style={{ marginBottom: '20px', color: "#002758", fontWeight: '600', fontFamily: 'Rajdhani', textAlign:'center', fontSize:'50px', letterSpacing:'1px' }} className="unique-class-79">Pay With Stripe</h2>
+                <label style={{ color: "#01BAF2", fontFamily: 'Rajdhani', fontSize:'20px', fontWeight:'600' }} className="unique-class-80">
+                    Enter Card Details
+                    <CardElement className="unique-class-81" />
+                </label>
+                <div style={{ display:'flex', justifyContent:'center' }} className="unique-class-82">
+                    <button style={{ padding: '10px', borderRadius: '10px', background: '#01BAF2', width: '100%', color: 'white', border: "none", outline: "none", marginTop: '30px', width:'257px' }} type="submit" disabled={!stripe} onClick={stripe} className="unique-class-83">
+                        Pay Installment
+                    </button>
+                </div>
+            </form>
 
     );
 }

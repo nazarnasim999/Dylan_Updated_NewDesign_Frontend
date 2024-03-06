@@ -14,7 +14,7 @@ return(
  
             <img src={adminimg}/>
  <span>
-    <h2>Elia Watson</h2>
+    {/* <h2>Elia Watson</h2> */}
     <h3>
     Expert
     </h3>
@@ -24,15 +24,15 @@ return(
 
             </div>
 
-            <div className="admin-card-body">
+            {/* <div className="admin-card-body">
                 <h3>Total Helped</h3>
                 <h2>1,022</h2>
-            </div>
+            </div> */}
 <div className="admin-imger-body"> 
 
 <img src={muto}/>
 
-<p>It’s Look Like a Beautiful Day</p>
+<p style={{color:'#002758'}}>It’s Look Like a Beautiful Day</p>
 </div>
 
         </div>

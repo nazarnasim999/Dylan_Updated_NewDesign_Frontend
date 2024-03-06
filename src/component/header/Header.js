@@ -57,7 +57,7 @@ const Header = () => {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar>
-        <Search>
+        {/* <Search>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
@@ -65,12 +65,12 @@ const Header = () => {
             placeholder="Search here..."
             inputProps={{ 'aria-label': 'search' }}
           />
-        </Search>
+        </Search> */}
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
           
            
-        <BootstrapDropdown/>
+        {/* <BootstrapDropdown/> */}
           <IconButton
             size="large"
             aria-label="show 17 new notifications"
