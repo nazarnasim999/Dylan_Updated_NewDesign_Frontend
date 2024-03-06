@@ -40,7 +40,7 @@ const style = {
 };
 
 export default function PaymentModal({ get_schedule_data, parent_check_status, save_index, set_selected_index , shedule_id ,job_id ,customer_id,vendor_id}) {
-const stripePromise = loadStripe('pk_test_51ONGSUJf5CYoJPVsmhVV5W3GMEu0dVMj0RVrroS6aISJLVGYrMLe1D7LziLXPY3WgLsJRZOprKbUQzCb2kbVHWMm00dDxogEMK');
+const stripePromise = loadStripe('pk_live_51ON5LdEN3YLdh4I9nJXr0oTVXOslXKHNNl7E4lu59pgWhF74DdzsHBCOqlS7hKjgUqzpenNyULx0p4JtGiEnJLcC00N9ExSAcI');
 
   const theme = useTheme();
   const dispatch = useDispatch()

@@ -41,7 +41,7 @@ const style = {
 };
 
 export default function InstallmentModal({ get_schedule_data, parent_check_status, save_index, set_selected_index ,number}) {
-  const stripePromise = loadStripe('pk_test_51ON5LdEN3YLdh4I948W834ytPcQZSo2Tbzv5qeXnxhY0Dn17NO38qnPTftybqXyt0IW1JBd6SERgV42fzcPdNegl00GVHgIKnx');
+  const stripePromise = loadStripe('pk_live_51ON5LdEN3YLdh4I9nJXr0oTVXOslXKHNNl7E4lu59pgWhF74DdzsHBCOqlS7hKjgUqzpenNyULx0p4JtGiEnJLcC00N9ExSAcI');
 
   const theme = useTheme();
   const dispatch = useDispatch()
