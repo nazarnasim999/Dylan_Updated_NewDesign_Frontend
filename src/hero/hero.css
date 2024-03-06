@@ -839,6 +839,15 @@ ol.carousel-indicators {
     background-size: 1800px;
 }
 
+
+nav.MuiBox-root.css-1o5pq7n{
+    z-index: 0 !important;
+}
+
+header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-1eb7m4u-MuiPaper-root-MuiAppBar-root{
+    z-index: 0 !important;
+}
+
 .Admin_expert_slider{
     background-image: url(/src/assets/new/back.png);
     background-position: center;

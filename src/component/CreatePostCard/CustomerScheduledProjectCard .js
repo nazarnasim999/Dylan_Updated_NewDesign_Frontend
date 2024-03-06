@@ -536,7 +536,7 @@ const CustomerScheduledProjectCard = () => {
 <div>
                                         {console.log(e.Paystatus,"payment ")}
 
-                                        { (e.Paystatus === "Paid" ) ?
+                                        { (e.Paystatus === "Paid" && e.NumberofInstallments===null) ?
                                         (   
                                                 <ReviewModal shedule_id={e.scheduleId}  job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                         
