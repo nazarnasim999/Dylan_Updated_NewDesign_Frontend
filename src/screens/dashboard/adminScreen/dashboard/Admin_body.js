@@ -396,7 +396,7 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
                 <Grid container p={1} >
                     <Grid item md={12} lg={12} sm={12} xs={12} mt={4} >
                         <Stack sx={{ position: 'relative' }}>
-                            <img src={back_image} style={{ width: '100%', height: 150 }} />
+                            {/* <img src={back_image} style={{ width: '100%', height: 150 }} /> */}
                             <Stack flexDirection={'row'} gap={2} alignItems={'center'} sx={{ position: 'absolute', top: { lg: 20, sm: 20, xs: 20, md: 20 }, left: 20 }}>
                                 {/* <Avatar
                                     alt="Remy Sharp"
@@ -408,9 +408,21 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
                         
                             {request.accepted && (
       <Stack alignItems={'end'} sx={{ position: 'absolute', top: { lg: 104, sm: 104, xs: 104, md: 104 }, right: 0 }}>
-        <button onClick={rechatButton} className='btn-reqs' style={{
-          backgroundColor: user_color
-        }}>Back To Customer Chat</button>
+        <button onClick={rechatButton} className='btn-reqs'
+        
+        style={{
+            borderRadius: '10px',
+            backgroundColor: 'rgb(1, 186, 242)',
+            border: 'none',
+            outline: 'none',
+            color: 'white',
+            fontSize: '15px',
+            cursor: 'pointer',
+            padding: '10px 20px'
+          }}
+          
+        
+        >Back To Customer Chat</button>
       </Stack>
     )}
                                             

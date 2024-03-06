@@ -113,12 +113,12 @@ try {
 
         return <div>
           <Stack mt={2}>
-            <Grid container p={2} sx={{ backgroundColor: vendor_color, borderRadius: 4, minHeight: '300px' }} >
+            <Grid container p={2} sx={{ backgroundColor: "white", borderRadius: 4, minHeight: '300px' }} className='Admin_expert_slider' >
               <Grid item md={8} lg={8} sm={12} xs={12}>
                 <Stack className='space_between_class' flexDirection={'column'} justifyContent={'space-between'}  >
                   <Stack flex={1}>
-                    <Stack sx={{ fontSize: { md: 30, lg: 38, sm: 25, xs: 20 }, color: 'white', fontWeight: 1000, textAlign: 'start' }}>{e.gig_title}</Stack>
-                    <Stack mt={1} mb={1} sx={{ fontSize: { md: 14, lg: 18, sm: 15, xs: 13, color: 'white', textAlign: 'start' } }}>{e.gig_discription}</Stack>
+                    <Stack sx={{ fontSize: { md: 30, lg: 38, sm: 25, xs: 20 }, color: '#002758', fontWeight: 1000, textAlign: 'start' }}>{e.gig_title}</Stack>
+                    <Stack mt={1} mb={1} sx={{ fontSize: { md: 14, lg: 18, sm: 15, xs: 13, color: '#002758', textAlign: 'start' } }}>{e.gig_discription}</Stack>
                   </Stack>
                   <Stack sx={{ mt: { xl: 7, lg: 0, md: 0, sm: 0, xs: 0 } }} >
                     <Stack flexDirection={'row'} alignItems={'center'} gap={0.5} >
@@ -132,9 +132,9 @@ try {
                     </Stack>
                     <Stack flexDirection={'row'} alignItems={'center'} gap={0.5} mt={0.9} mb={{ md: 1, sm: 1 }}>
                       {/* <Stack><MdLeaderboard color={'#FB8500'} /></Stack> */}
-                      <Stack sx={{ color: "white", fontSize: { md: 12, lg: 15, sm: 12, xs: 10 }, fontWeight: 'bold' }}></Stack>
+                      <Stack sx={{ color: "#002758", fontSize: { md: 12, lg: 15, sm: 12, xs: 10 }, fontWeight: 'bold' }}></Stack>
                       {/* <Stack ml={2}><MdLeaderboard color={'#FB8500'} /></Stack> */}
-                      <Stack sx={{ color: "white", fontSize: { md: 12, lg: 15, sm: 12, xs: 10 }, fontWeight: 'bold' }}></Stack>
+                      <Stack sx={{ color: "#002758", fontSize: { md: 12, lg: 15, sm: 12, xs: 10 }, fontWeight: 'bold' }}></Stack>
                     </Stack>
                   </Stack>
 

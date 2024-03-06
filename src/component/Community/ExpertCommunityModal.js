@@ -134,6 +134,7 @@ export default function ExpertGigModal() {
     <GigButton
         onClick={handleOpen}
         borderColor={theme.text_color}
+        
         color={theme.text_color}
         padding="10px 20px 10px 20px"
         // startIcon={<IoMdAdd size={22} color={theme.text_color} />}
