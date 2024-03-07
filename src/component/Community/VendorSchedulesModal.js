@@ -514,6 +514,9 @@ else {
       </button> */}
 
 
+
+      <div className="create-shedule">
+
       <Modal
         disableScrollLock
         open={open}
@@ -525,9 +528,11 @@ else {
         <Box
           sx={{
             ...style,
-            width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
-            height: { md: "55%", lg: "55%", sm: "80%", xs: "70%" },
-            // height: { md: "70%", lg: "70%", sm: "50%", xs: "auto" },
+            width: { md: "40%", lg: "40%", sm: "80%", xs: "100%" },
+            height: { md: "55%", lg: "55%", sm: "50%", xs: "40%" },
+
+            marginLeft:'45px',
+           
             overflowY: "scroll",
           }}
           className="scroll_content scroll-remove"
@@ -546,13 +551,15 @@ else {
               }}
             >
               {" "}
-              Create Schedule
+              Create Shedule
             </Stack>
           </Stack>
-          {/* =============== Name  ============ */}
-          <Stack  alignItems={'center'}  gap={1.5}  flexDirection={'row'} >
+         
+          <Stack  alignItems={'center'}  gap={1.5}  flexDirection={'row'}  className="random2">
             
 
+
+              <div className="random1">
             <Stack
               sx={{
                 fontSize: { md: 16, lg: 16, sm: 16, xs: 11 },
@@ -572,9 +579,12 @@ else {
             >
               {receivedObject.Name}
             </Stack>
+
+              </div>
            
 
          
+              <div className="random1">
 
             <Stack
               sx={{
@@ -595,12 +605,15 @@ else {
             >
               {receivedObject.email}
             </Stack>
+              </div>
 
           
           
-          {/* =============== Email  ============ */}
-          {/* =============== Home Address  ============ */}
+         
           <Stack flexDirection={'row'} alignItems={'center'} gap={1.5}>
+
+
+              <div className="random1">
 
             <Stack
               sx={{
@@ -621,11 +634,17 @@ else {
             >
               {receivedObject.Home_Address}
             </Stack>
+              </div>
+
+
+
 
           </Stack>
-          {/* =============== Home Address  ============ */}
-          {/* =============== Problem Details  ============ */}
+         
           <Stack flexDirection={'row'} alignItems={'center'} gap={1.5}>
+
+
+              <div className="random1">
 
             <Stack
               sx={{
@@ -646,16 +665,17 @@ else {
             >
               {receivedObject.job_details.details}
             </Stack>
+              </div>
+
+
+
+
+
 
           </Stack>
 
           
 
-          {/* =============== Problem Details  ============ */}
-          {/* =============== Customer Budget  ============ */}
-          
-          {/* =============== Customer Budget  ============ */}
-          {/* ===============Budget  ============ */}
           
           </Stack>
 
@@ -666,71 +686,10 @@ else {
         {
 
           receivedObject.job_details?.availablity_time?.map((availability, index) => (
-            // <Stack 
-            //   key={index}
-            //   // var job_id 
-             
-            //   flexDirection={'row'}
-            //   alignItems={'center'}
-            //   gap={'80px'}
-            // >
-            //   {availability.date && (
-            //     <>
-                        
-            //             {console.log(receivedObject?.job_details?.time1,"job_detailssssssssssssssssssssttssssts")}
-            //             {console.log('Key1:', index)}
-            //             {/* {var job_id=receivedObject.job_details?._id} */}
-
-            //             {/* {{ job_id: receivedObject.job_details?._id }} */}
-
-            //             {/* {console.log(job_id,"job_detailssssssssssssssssssssttssssts")} */}
-                        
-            //       <Stack
-            //         sx={{
-            //           color: selectedDate === availability.date ? 'red' : 'black',
-            //           cursor: 'pointer',
-            //         }}
-            //         onClick={() => handleDateClick(availability.date,index)}
-            //       >
-            //         {new Intl.DateTimeFormat('en-US', {
-            //           year: 'numeric',
-            //           month: 'long',
-            //           day: 'numeric',
-            //         }).format(new Date(availability.date))}
-            //       </Stack>
-            //       <Stack
-            //         flexDirection={'row'}
-            //         alignItems={'center'}
-            //         gap={'35px'}
-            //         fontSize={15}
-            //         ml={1}
-            //       >
-            //         {availability.times?.length > 0 ? (
-            //           availability.times.map((time, timeIndex) => (
-            //             <span
-            //               key={timeIndex}
-            //               onClick={() => handleTimeClick(time , index)}
-            //               style={{
-            //                 color: selectedTime === time && selectedIndex === index ? 'red' : 'black',
-            //                 cursor: 'pointer',
-            //               }}
-            //             >
-            //               {new Date(`2000-01-01T${time}`).toLocaleTimeString([], {
-            //                 hour: '2-digit',
-            //                 minute: '2-digit',
-            //               })}
-            //             </span>
-            //           ))
-            //         ) : (
-            //           <span>-----</span>
-            //         )}
-            //       </Stack>
-            //     </>
-            //   )}
-            // </Stack>
+         
 
 
-            <Stack 
+            <Stack  className="random3"
   key={index}
   flexDirection={'row'}
   alignItems={'center'}
@@ -750,20 +709,7 @@ else {
       > 
       {availability.date==='2000-01-01' ? 
       
-      // <input 
-      
-      
-      // className="inputshedule"
-      // type="text"
-      // value={data.shedule_descriptions}
-    
-
-      // onChange={setshedule_description}
-
-      
-      
-      
-      // >
+     
       <Stack   className="inputshedule">
       <input 
      
@@ -825,56 +771,15 @@ else {
       </Stack>
     </Stack>
          
-          
-          {/* <Stack flexDirection={'row'}  gap={1.5} mt={1} >
-              
-            <Stack  flexDirection="column"
-    flex="0.3"
-    alignItems={'end'}
-    justifyContent="flex-end" 
-              sx={{
-                fontSize: { md: 24, lg: 24, sm: 16, xs: 11 },
-                color: "black",
-                fontWeight: "bold",
-              }}
-            >
-              Select Time:
-            </Stack>
-            
-
-<Stack  flexDirection="column"
-            flex="1"
-              ml={2}>
-      
-        <TextField
-          label="Time"
-          type="time"
-          variant="outlined"
-          fullWidth
-          name="time"
-          value={data.time}
-          onChange={handleInputFromtime}
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-      </Stack>
-
- 
-
-          </Stack> */}
-          
-          {/* ===============Budget  ============ */}
-          {/* =============== Images  ============ */}
+       
           <Stack flexDirection={'row'} alignItems={'center'} gap={1.5} mt={2}>
 
             
-            {/* </Stack> */}
+           
 
           </Stack>
 
-          {/* </Stack> */}
-          {/* =============== Images  ============ */}
+        
           <Stack alignItems={'center'}>
           <button style={{
             backgroundColor: vendor_color,
@@ -903,6 +808,13 @@ else {
         </Box>
       </Modal>
 
+      </div>
+
+
+
+
+
+
       <Modal
         disableScrollLock
         open={opens}
@@ -914,9 +826,11 @@ else {
         <Box
           sx={{
             ...style,
-            width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
-            height: { md: "50%", lg: "50%", sm: "80%", xs: "70%" },
-            // height: { md: "70%", lg: "70%", sm: "50%", xs: "auto" },
+            width: { md: "40%", lg: "40%", sm: "80%", xs: "100%" },
+            height: { md: "55%", lg: "55%", sm: "50%", xs: "40%" },
+
+            marginLeft:'45px',
+          
             overflowY: "scroll",
           }}
           className="scroll_content scroll-remove"
@@ -1065,9 +979,11 @@ else {
         <Box
           sx={{
             ...style,
-            width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
-            height: { md: "50%", lg: "50%", sm: "80%", xs: "70%" },
-            // height: { md: "70%", lg: "70%", sm: "50%", xs: "auto" },
+            width: { md: "40%", lg: "40%", sm: "80%", xs: "100%" },
+            height: { md: "55%", lg: "55%", sm: "50%", xs: "40%" },
+
+            marginLeft:'45px',
+           
             overflowY: "scroll",
           }}
           className="scroll_content scroll-remove"

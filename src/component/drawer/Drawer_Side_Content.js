@@ -206,7 +206,7 @@ const Drawer_Side_Content = () => {
                             </Stack>
                         </Stack> */}
 
-                    <Stack height={"260px"} sx={{ backgroundColor: 'white' }} style={{padding:'20px 10px 20px 10px'}} >
+                    <Stack height={"260px"} sx={{ backgroundColor: 'white' }} style={{padding:'20px 10px 20px 10px'}}  className='72boy'>
 
                     <Stack style={{backgroundColor:'#01BAF2' , padding:'30px 20px 30px 20px', borderRadius:'20px'}} className='73boy leaf'>
 

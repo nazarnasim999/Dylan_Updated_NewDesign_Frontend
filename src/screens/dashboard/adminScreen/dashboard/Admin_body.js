@@ -407,7 +407,7 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
                             </Stack>
                         
                             {request.accepted && (
-      <Stack alignItems={'end'} sx={{ position: 'absolute', top: { lg: 104, sm: 104, xs: 104, md: 104 }, right: 0 }}>
+      <Stack alignItems={'end'} sx={{ position: 'absolute', top: { lg: 104, sm: 104, xs: 104, md: 104 }, right: 0 }} className='adminbutton'>
         <button onClick={rechatButton} className='btn-reqs'
         
         style={{

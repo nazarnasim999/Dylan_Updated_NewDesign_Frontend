@@ -13,6 +13,11 @@ th {
 label.unique-class-80 {
     width: 400px;
 }
+.random1{
+
+    display: flex;
+    gap: 5px;
+}
 
 
 .PayNow_AHTI1{
@@ -1729,6 +1734,18 @@ input.inputStyle {
 .screen_position_container .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-4.css-805qnm-MuiGrid-root {
     margin-top: 100px !important;
 }
+.adminbutton {
+    top: 48px !important;
+    right: 40px !important;
+}
+
+
+
+.random2 {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 }
 
 @media screen and (max-width: 600px){
@@ -1891,7 +1908,7 @@ input.inputStyle {
 }
 
 
-.classname-471 {}
+
 
 .classname-471 .MuiStack-root.css-fqd73d-MuiStack-root {
     padding-top: 0px;
@@ -2560,7 +2577,76 @@ select#dropdown {
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
 }
 
+.accept_admin {
+  
+    width: 78%;
+  
+}
+
+.reject_admin{
+    width: 78%;
+}
+
+.adminbutton {
+    top: 48px !important;
+    right: 40px !important;
+}
+
+.unique-class-29{
+
+    
+        display: flex;
+        flex-direction: column;
+    
+}
+.classname-433{
+    display: none !important;
+}
+.classname-432{
+    display: none !important;
+}
+
+/* 
+.MuiStack-root.classname-433.css-1c7u6fx {
+    display: none !important;
+}
+
+.MuiStack-root.classname-432.css-sw0n9g {
+    display: none !important;
+}
+ */
+ .MuiStack-root.classname-583.css-p9gxu7 {
+    display: none !important;
+}
 
 
+.screen_position_container .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-12.MuiGrid-grid-md-4.MuiGrid-grid-lg-4.css-1iyfjck {
+    margin-top: 100px !important;
+}
+.MuiStack-root.unique-class-29.css-az31pn {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+
+.random1{
+
+    display: flex;
+    gap: 5px;
+}
+
+
+.random2 {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.random3{ 
+    display: block !important;
+}
+.unique-class-29{
+    display: flex !important;
+    flex-direction: column !important;
+}
 
 }
