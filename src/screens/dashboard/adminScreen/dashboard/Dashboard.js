@@ -35,6 +35,9 @@ const Admin_Dashboard = () => {
           active_sidebar_index={active_sidebar_index}
           content_section={<Admin_body />}
         />
+
+{/* <Admin_body /> */}
+       
       </Stack>
 
 

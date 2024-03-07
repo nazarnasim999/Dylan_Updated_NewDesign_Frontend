@@ -24,7 +24,15 @@ export default function Admin_Templates_SideBar(props: Props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    console.log('abcddcd');
+    // setMobileOpen(!mobileOpen);
+    setMobileOpen(true);
+
+  };
+
+  const handleDrawerToggles = () => {
+    console.log('abcddcd');
+    setMobileOpen(false);
   };
 
 
@@ -41,7 +49,8 @@ export default function Admin_Templates_SideBar(props: Props) {
   return (
     <Box sx={{ display: 'flex', }}>
       {/* <CssBaseline /> */}
-      <AppBar
+      <AppBar 
+      onClick={handleDrawerToggles}
         elevation={1}
         position="fixed"
         sx={{
@@ -54,11 +63,14 @@ export default function Admin_Templates_SideBar(props: Props) {
         }}
       >
         <Toolbar sx={{ backgroundColor: 'white' }}>
-          <IconButton
+          <IconButton style={{zIndex:'1'}}
             color="secondary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
+            onTouchStart={handleDrawerToggle}
+           onTouchEnd={handleDrawerToggle}
+           onTouchMove={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
@@ -68,7 +80,52 @@ export default function Admin_Templates_SideBar(props: Props) {
           </Stack>
         </Toolbar>
       </AppBar>
-      <Box
+      <div>
+        {
+          mobileOpen &&
+       
+        <div>
+        <Stack
+        style={{zIndex:'0'}}
+          // container={container}
+          // variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'block' },
+
+          }}
+
+        >
+          
+          <Stack className='drawer_style' width={230} >
+
+            <Admin_Drawer_Side_Content sendDataToParent={handleDataFromChild} />
+          </Stack>
+        </Stack>
+        {/* <Drawer
+
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+          }}
+          open
+        >
+          <Stack className='drawer_style' width={280} >
+
+            <Admin_Drawer_Side_Content />
+          </Stack>
+        </Drawer> */}
+        </div>
+         }
+        <div onClick={handleDrawerToggles}>
+        {content_section}
+        </div>
+      </div>
+      {/* <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
         aria-label="mailbox folders"
@@ -81,7 +138,7 @@ export default function Admin_Templates_SideBar(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
@@ -108,13 +165,13 @@ export default function Admin_Templates_SideBar(props: Props) {
             <Admin_Drawer_Side_Content />
           </Stack>
         </Drawer>
-      </Box>
-      <Box
+      </Box> */}
+      {/* <Box
         component="main"
         sx={{ flexGrow: 1, width: { sm: `calc(100% - 260px)` } }}
       >
         {content_section}
-      </Box>
+      </Box> */}
     </Box>
   );
 }

@@ -77,17 +77,13 @@ const Header = () => {
             color="inherit"
           >
              
-              <Badge badgeContent={0} color="error">
+              {/* <Badge badgeContent={0} color="error">
               <NotificationsIcon />
 
               
 
-              {/* <div>
-            <button style={{backgroundColor:'yellow', width:'20px'}}>
-              TS
-            </button>
-          </div> */}
-            </Badge>
+           
+            </Badge> */}
           </IconButton>
           {/* <IconButton
             size="large"

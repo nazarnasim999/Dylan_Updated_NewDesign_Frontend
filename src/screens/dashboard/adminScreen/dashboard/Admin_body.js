@@ -23,6 +23,7 @@ import ExpertSlider from '../../../../component/Slider/ExpertSlider';
 
 import axios from 'axios';
 import AdminSideBar from '../AdminSideBar';
+import Admin_Templates_SideBar from '../../../../component/drawer/admin/Admin_Templates_SideBar';
 
 
 const Admin_body = () => {
@@ -391,6 +392,7 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
             
 
                 <div  className='hello-ahti'>
+                   
 
            
                 <Grid container p={1} >
@@ -588,7 +590,16 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
             <AdminSideBar/>
             </div>
 
+
+
             </div>
+            {/* <div >
+                    <Admin_Templates_SideBar className="ts"
+         
+        />
+                    </div> */}
+
+           
         </div >
     )
 }
