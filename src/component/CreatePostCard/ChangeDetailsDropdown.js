@@ -61,7 +61,7 @@ const ChangeSetting = ({ userInfo }) => {
   };
 
 
-  // https://dilannazartsbackendtest-production.up.railway.app
+  // https://honesthome-backend-6d8f37871a1b.herokuapp.com
 
   const handlePaymentOptionsSubmit = async (e) => {
     e.preventDefault();
@@ -78,7 +78,7 @@ const ChangeSetting = ({ userInfo }) => {
     };
     
     try {
-      const response = await axios.post('https://dilannazartsbackendtest-production.up.railway.app/customercreatebank', formData);
+      const response = await axios.post('https://honesthome-backend-6d8f37871a1b.herokuapp.com/customercreatebank', formData);
       console.log(response.data);
       window.location.reload();
       // Handle success
@@ -114,7 +114,7 @@ const handleUpdateProfileInfo = async(e)=>{
   };
   
   try {
-    const response = await axios.post('https://dilannazartsbackendtest-production.up.railway.app/updateuserdetails', formData);
+    const response = await axios.post('https://honesthome-backend-6d8f37871a1b.herokuapp.com/updateuserdetails', formData);
     console.log(response.data);
     window.location.reload();
     // Handle success

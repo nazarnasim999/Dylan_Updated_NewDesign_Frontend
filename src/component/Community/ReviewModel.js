@@ -70,7 +70,7 @@ export default function ReviewModal({ shedule_id,  job_id, customer_id, vendor_i
             backgroundColor: user_color,
             padding: "5px 20px 5px 20px",
             color: "white",
-            width: "120px",
+            width: "100px",
             height: "40px",
             alignItems: "center",
             textAlign: "center",

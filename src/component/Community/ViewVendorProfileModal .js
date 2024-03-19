@@ -45,7 +45,7 @@ export default function ViewVendorProfileModal({ get_profile_data }) {
       const formData = {
           vendor_id: vendorId
       };
-      axios.get(`https://dilannazartsbackendtest-production.up.railway.app/view_vendor_profile/${formData.vendor_id}`)
+      axios.get(`https://honesthome-backend-6d8f37871a1b.herokuapp.com/view_vendor_profile/${formData.vendor_id}`)
           .then(response => {
               // Handle successful response
               console.log(response.data,"VendorTS");

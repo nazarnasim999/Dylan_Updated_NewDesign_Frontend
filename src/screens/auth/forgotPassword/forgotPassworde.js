@@ -95,7 +95,7 @@ return (
       // sx={{
       //   height: { md: "100vh", lg: "130vh", sm: "100vh", xs: "100vh" },
       // }}
-      className="main_container-my"
+      className="main_container-my forgot"
     >
       <Container maxWidth={"md"} sx={{ p: { md: 5, lg: 5, sm: 0, xs: 0 }, justifyContent: 'center', alignItems: 'center' }}>
         <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }} >
@@ -115,7 +115,7 @@ return (
                 <img   className="thala" width={150} height={150} src={logo} />
               </Stack>
               <Stack className="titleing">Forgot password</Stack>
-              <Stack className="otp_sub" sx={{ color: "#686868", mt: 1, fontSize: 10 }}>
+              <Stack className="otp_sub" sx={{ color: "#686868", mt: 1, fontSize: 15 }}>
                 The Verification Email will be sent to the mailbox. please check it
                 !
               </Stack>

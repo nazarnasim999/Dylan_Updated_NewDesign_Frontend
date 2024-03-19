@@ -22,7 +22,7 @@ const FiveStarRating = ({C_ID,V_ID, J_ID, S_ID}) => {
         SheduleId: S_ID
     }
     console.log(formData,"FORM DATA")
-    axios.post ('http://localhost:5000/customer_review',formData)
+    axios.post ('https://honesthome-backend-6d8f37871a1b.herokuapp.com/customer_review',formData)
     .then((res)=>{
         console.log(res.data.message,"REVIEW")
         if(res.data.message=='Review Posted Successfully')

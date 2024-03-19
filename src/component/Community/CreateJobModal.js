@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
+// import {Modal} from "@mui/material/Modal";
+
+import { Button, Modal, Typography } from '@mui/material';
+
+
 import useTheme from "../../hooks/theme";
 import { Grid, Stack } from "@mui/material";
 import "./premium.css";
@@ -25,6 +29,7 @@ import { Row } from "react-bootstrap";
 import { toast } from "react-toastify";
 
 import backimg from '../../../src/assets/Frame 153.png'
+import MyPopupJobPhoto from "./PopupJobPhoto";
 
 
 const style = {
@@ -64,6 +69,8 @@ export default function CreateJobModal() {
     selected_queries: null,
 
     emergencyResponse: null,
+
+    choose_service: null,
 
     // 
     
@@ -271,6 +278,18 @@ const handledropdown = (e) => {
 };
 
 
+const [repair,setrepair]= useState('')
+
+const handleRepair = (e)=>{
+
+  setrepair(e.target.value)
+console.log(repair,"REPAIR")
+setData({ ...data, choose_service: e.target.value });
+
+}
+
+
+
 
   const handleDeleteDate = () => {
 
@@ -336,7 +355,12 @@ const [communityData, setCommunityData] = useState({});
     if(data.selected_queries === 'public' || !data.selected_queries )
     {
       // alert("Selected Queries cannot be Null")
-      toast.warning('Selected Queries cannot be Null');
+      toast.warning('Please Select Type of Home Service');
+    }
+
+    else if(!data.images){
+      // toast.warning('Images cannot be Null');
+      handleOpenModal()
     }
 
     else {
@@ -426,6 +450,53 @@ const [communityData, setCommunityData] = useState({});
 
 
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+
+
+
+
+  const handlePostJob = () => {
+    let obj = {
+      type: "customer",
+      user_id: storedUserId,
+      available:dates,
+      ...data,
+
+    }
+    if(data.selected_queries === 'public' || !data.selected_queries )
+    {
+      // alert("Selected Queries cannot be Null")
+      toast.warning('Selected Queries cannot be Null');
+    }
+
+    else {
+      dispatch(create_customer_job_async_service(obj))
+      if (customer_job_status === asyncStatus.SUCCEEDED) {
+        dispatch(setCustomerIdle(setCustomerIdle))
+      }
+  
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="class-215">
@@ -453,8 +524,9 @@ const [communityData, setCommunityData] = useState({});
             sx={{
                 ...style,
                 width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
-                height: { md: "95%", lg: "95%", sm: "90%", xs: "90%" },
+                height: { md: "95%", lg: "95%", sm: "80%", xs: "80%" },
                 overflowY: "scroll",
+                marginLeft:'25px'
             }}
             className="scroll_content scroll-remove jobmodal class-218"
         >
@@ -535,9 +607,33 @@ const [communityData, setCommunityData] = useState({});
                             className="class-233"
                         />
                         <br/>
+
+                        {
+                          showtime? (
+                            <div className="dropdown class-2399">
+                            <label htmlFor="dropdown"> Choose Service: </label>
+                            <select id="dropdown" value={repair} onChange={handleRepair}>
+                                <option value="">Select...</option>
+                                <option value="Maintenance"> Maintenance</option>
+                                <option value="Installation"> Installation</option>
+                                <option value="Repair"> Repair</option>
+                            </select>
+                           
+                        </div>
+
+                          ):null
+                        }
+
+                        
+
+
+
+
+
+
                         {!showtime ? (
                             <TextField
-                                label="Time"
+                                label="Date/Time"
                                 variant="outlined"
                                 fullWidth
                                 name="amount"
@@ -545,8 +641,10 @@ const [communityData, setCommunityData] = useState({});
                                 onChange={handleInputAmount}
                                 className="class-234"
                             />
+                          
                         ) : null}
                     </Stack>
+                    <br/>
                     {showtime && emergency !== 'emergency' ? (
                         <div className="dropdown class-235">
                             <label htmlFor="dropdown">Amount of Quotes:</label>
@@ -593,7 +691,7 @@ const [communityData, setCommunityData] = useState({});
                                     <Grid container spacing={2} mt={3}>
                                         <Grid item md={6} lg={6} xs={12} sm={12}>
                                             <Stack sx={{ color: "black", fontSize: { md: 20, lg: 20, sm: 15, xs: 8 }, fontWeight: "bold" }} mt={3}>
-                                                Select job date
+                                                Select Quote Date
                                             </Stack>
                                         </Grid>
                                         <Grid item md={6} lg={6} xs={12} sm={12}>
@@ -655,7 +753,7 @@ const [communityData, setCommunityData] = useState({});
                 )}
             </Grid>
             <br />
-            <Stack mt={3} alignItems={'center'} className="Create_button class-242">
+            <Stack mt={3} mb={3} alignItems={'center'} className="Create_button class-242">
                 <Btn
                     onClick={submitHandle}
                     label={'Create Now'}
@@ -666,8 +764,55 @@ const [communityData, setCommunityData] = useState({});
                     className="class-243"
                 />
             </Stack>
+            <br/>
         </Box>
     </Modal>
+
+                  {/* pop up */}
+          
+
+                  <div>
+      {/* <Button variant="contained" onClick={handleOpenModal}>
+        Open Modal
+      </Button> */}
+
+      <Modal open={showModal} onClose={handleCloseModal}>
+        <div style={{
+          position: 'absolute',
+          
+       
+          transform: 'translate(-50%, -50%)',
+        
+          padding: '20px',
+          outline: 'none',
+          borderRadius: '5px',
+        }}
+        
+        className="popupjob"
+        >
+          <Typography variant="h5" gutterBottom     className="popup2222222"  >
+            Are you Sure, you want to post a job without Pictures?
+          </Typography>
+          {/* <Typography variant="body1">
+            Modal content goes here...
+          </Typography> */}
+
+          <div className="popup-boxjob">
+          <Button variant="contained" color="error" onClick={handlePostJob} style={{ marginTop: '20px' }}>
+            Yes
+          </Button>
+          <Button variant="contained" onClick={handleCloseModal} style={{ marginTop: '20px' }}>
+            No
+          </Button>
+          </div>
+
+        </div>
+      </Modal>
+    </div>
+
+
+
+
 </div>
 
   );

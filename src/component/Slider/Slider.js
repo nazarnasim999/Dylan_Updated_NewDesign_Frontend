@@ -75,7 +75,7 @@ const _id = e;
 console.log(_id,"SaskldakldjaksdjaksdjakldjaskjkldjajdskldjklasjdklsjdakldjlkadklasdjklasjdTSTSTSTSTaaaa")
 //  axios.post('http://localhost:5000/delete-vendor-gig', { _id });
 try {
-  const response =  await axios.post('https://dilannazartsbackendtest-production.up.railway.app/delete-vendor-gig', { _id });
+  const response =  await axios.post('https://honesthome-backend-6d8f37871a1b.herokuapp.com/delete-vendor-gig', { _id });
   console.log(response);
   window.location.reload();
 } catch (error) {

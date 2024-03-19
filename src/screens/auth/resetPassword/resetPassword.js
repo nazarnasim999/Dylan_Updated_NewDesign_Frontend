@@ -14,7 +14,7 @@ import {
   setIdleResetOtpStatus,
   setIdleResetPasswordStatus,
 } from "../../../store/slice/AuthSlice";
-import logo from '../../../assets/honestlogo.png'
+import logo from '../../../assets/new/2222.png'
 const ResetPassword = () => {
   const navigation = useNavigate();
   const dispatch = useDispatch();
@@ -132,9 +132,9 @@ const ResetPassword = () => {
     <Stack
       sx={{
         // backgroundColor: main_color,
-        height: { md: "130vh", lg: "130vh", sm: "110vh", xs: "110vh" },
+        height: { md: "100vh", lg: "100vh", sm: "110vh", xs: "110vh" },
       }}
-      className="main_container"
+      className="main_container forgot"
     >
       <Container maxWidth={"md"} sx={{ p: { md: 5, lg: 5, sm: 0, xs: 0 }, justifyContent: 'center', alignItems: 'center' }}>
         <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }} >
@@ -176,12 +176,35 @@ const ResetPassword = () => {
                     />
                   </Grid>
                   <Grid   className="nazar" item md={12} lg={12} sm={12} xs={12}>
+
+                      <div className="random_forgot_otp">
+                        
                     <Btn 
                       loading={reset_status === asyncStatus.LOADING}
                       onClick={() => verifyHandle()}
                       label={"Send"}
                       fullWidth={true}
+
+                      style={{
+                        
+                        
+                        backgroundColor:'#1AC1F3',
+                        height:'50px',
+                        width:'100px',
+                        borderRadius:'10px',
+                        color:'white',
+                        fontWeight:'400',
+                        border:'1px solid #1AC1F3'
+
+                    
+                    
+                    
+                    
+                    }}
                     />
+                      </div>
+
+
                   </Grid>
                 </Grid>
               </Stack>

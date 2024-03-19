@@ -25,12 +25,15 @@ const MainSectiontwo = () => {
     const [currentIndex, setCurrentIndex] = useState("Vendor");
     const tabsBtn = [
         {
-            TabName: 'Vendor',
-            Value: "Vendor"
-        },
-        {
+            
+
+
             TabName: 'Customer',
             Value: "Customer"
+        },
+        {
+            TabName: 'Vendor',
+            Value: "Vendor"
         },
         {
             TabName: 'Expert',

@@ -102,6 +102,8 @@ const VendorProfileCard = () => {
   // console.log("vendor_profile_data", vendor_login_data.user_id ? vendor_login_data.user_id : vendor_data?.user_id);
   // const firstName = vendor_profile_data?.Name.split(' ')[0];
   const firstName = vendor_profile_data?.Name;
+  const split_firstname = vendor_profile_data?.Name.split(' ')[0];
+
   const [userInfo, setUserInfo] = useState({
     fullName: '',
     email: '',
@@ -175,7 +177,7 @@ const VendorProfileCard = () => {
                             className="classname-590"
                         />
                         <Stack flexDirection={"column"} className="classname-591">
-                            <span  className="classname-436" sx={{ fontSize: { md: 30, lg: 40, sm: 20, xs: 10 }}} style={{paddingLeft:'20px', fontWeight:'bold', fontSize:'40px'}}>{firstName}</span>
+                            <span  className="classname-436" sx={{ fontSize: { md: 30, lg: 40, sm: 20, xs: 10 }}} style={{paddingLeft:'20px', fontWeight:'bold', fontSize:'40px'}}>{split_firstname}</span>
                             <p className="classname-437" sx={{ fontSize: { md: 30, lg: 40, sm: 20, xs: 10 }}} style={{paddingLeft:'20px', fontWeight:'bold', fontSize:'25px', color:'#01BAF2'}}>Vendor</p>
                         </Stack>
                     </div>

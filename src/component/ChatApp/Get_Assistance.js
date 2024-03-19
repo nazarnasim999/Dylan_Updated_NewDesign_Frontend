@@ -130,8 +130,8 @@ const Get_Assistance = () => {
         {selectedIndexValue === 'Customer' && (
           <Stack sx={{ backgroundColor: 'white', borderRadius: 4, position: 'relative' }} className='Expert-Assistance unique-class-40'>
             <Stack p={2} className="unique-class-41">
-              <Stack sx={{ fontSize: 20, fontWeight: 'bold', color: main_color }} className="unique-class-42">Get Assistance</Stack>
-              <Stack sx={{ fontSize: 12, color: main_color, mt: 0.8 , fontWeight: 'bold'}} className="unique-class-43">Seeking expert advice and exploring payment details—let's discuss now for valuable </Stack>
+              <Stack sx={{ fontSize: 20, fontWeight: 'bold', color: main_color }} className="unique-class-42">Get Assistance to Hire an Expert</Stack>
+              <Stack sx={{ fontSize: 12, color: main_color, mt: 0.8 , fontWeight: 'bold'}} className="unique-class-43">Hire an Expert to decide between your quotes for you giving you a hands off experience. </Stack>
               <Stack onClick={ExpertTalkHandle} sx={{ fontSize: 14, backgroundColor: vendor_color, p: 0.9, borderRadius: 1, color: 'white', width: "120px", mt: 0.5, cursor: 'pointer' }} mt={2} className="unique-class-44">Want An Expert</Stack>
             </Stack>
             <Stack sx={{ position: 'absolute', bottom: 0, right: -6 }} className="unique-class-45">

@@ -86,10 +86,10 @@ export default function InstallmentModal({ get_schedule_data, parent_check_statu
           border: 'none',
           outline: 'none',
           color: 'white',
-          fontSize: '15px',
+          fontSize: '12px',
           cursor: 'pointer',
           padding: '3px',
-          width: '120px',
+          width: '105px',
           height: '40px',
           fontWeight: 'bold'
         }}
@@ -108,8 +108,8 @@ export default function InstallmentModal({ get_schedule_data, parent_check_statu
         <Box
             sx={{
                 ...style,
-                width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
-                height: { md: "30%", lg: "30%", sm: "30%", xs: "30%" },
+                // width: { md: "40%", lg: "40%", sm: "50%", xs: "80%" },
+                // height: { md: "30%", lg: "30%", sm: "30%", xs: "30%" },
                 // height: { md: "70%", lg: "70%", sm: "50%", xs: "auto" },
                 overflowY: "scroll",
             }}

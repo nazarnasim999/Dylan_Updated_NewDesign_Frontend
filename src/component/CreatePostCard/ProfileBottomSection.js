@@ -31,7 +31,7 @@ const ProfileBottomSection = () => {
         handleClose()
         // navigate('/')
         // window.location.reload();
-        window.location.href = 'https://honesthome.appssols.com/';
+        window.location.href = 'https://honesthomehub.com/';
     }
 
 
@@ -58,7 +58,7 @@ const ProfileBottomSection = () => {
                     <img src={logout} className="setting-button" style={{ width: '5%' }} onClick={LogoutHandle} />
                 </div>
 
-          <div className="classname-559">  <div style={{ fontSize: '40px', fontWeight: 'bold', color: main_color }} className="classname-560">SHEDULED PROJECTS</div></div>
+          <div className="classname-559">  <div style={{ fontSize: '40px', fontWeight: 'bold', color: main_color }} className="classname-560">SCHEDULED PROJECTS</div></div>
             <Divider sx={{ borderWidth: 1, borderColor: 'black' }} className="classname-535" />
             <Stack className="classname-562">
                 {/* <Stack sx={{ color: '#000000', fontSize: { md: 16, lg: 16, sm: 10, xs: 8 } }}> ipsumLorem dolor sit amet, consectetur adipiscing elit. Pellentesque at dui et </Stack>

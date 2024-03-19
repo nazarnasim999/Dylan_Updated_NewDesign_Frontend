@@ -24,7 +24,7 @@ const ViewProfileBtn = () => {
         handleClose()
         // navigate('/')
         // window.location.reload();
-        window.location.href = 'https://honesthome.appssols.com/';
+        window.location.href = 'https://honesthomehub.com/';
     }
 
     return (

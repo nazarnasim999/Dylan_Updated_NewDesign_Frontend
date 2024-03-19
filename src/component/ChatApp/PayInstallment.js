@@ -30,7 +30,7 @@ export function InstallmentCheckoutForm({ get_schedule_data_nested, get_status_f
         const handle_date = () => {
             let i_num = 1;
           
-            axios.post('https://dilannazartsbackendtest-production.up.railway.app/update-shedule', { id1: id1, i_num: i_num }, {
+            axios.post('https://honesthome-backend-6d8f37871a1b.herokuapp.com/update-shedule', { id1: id1, i_num: i_num }, {
               timeout: 30000 // Set the timeout to 30 seconds
             })
             .then(response => {

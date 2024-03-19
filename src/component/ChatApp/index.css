@@ -217,8 +217,8 @@ body {
   justify-content: space-between !important;
   display: flex;
   flex-direction: row-reverse !important;
-  min-width: 660px;
-  max-width: 729px;
+  min-width: 760px;
+  max-width: 760px;
   min-height: 360px;
   max-height: 360px;
 }

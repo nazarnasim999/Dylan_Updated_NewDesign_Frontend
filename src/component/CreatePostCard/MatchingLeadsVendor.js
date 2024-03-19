@@ -102,11 +102,18 @@ const MatchingLeadsVendor = () => {
                                                 {e?.jobs?.note && <div>{e.jobs.note}</div>}
                                             </Stack>
                                             <Stack sx={{ color: 'black', fontWeight: "5px", fontSize: 15 }} className="classname-517">
-                                                {e?.jobs?.amount && <div>Time: {e.jobs.amount}</div>}
+                                                {e?.jobs?.amount && <div>Date/Time: {e.jobs.amount}</div>}
                                             </Stack>
                                             <Stack sx={{ color: '#000000', fontSize: 12, }} style={{ color: 'black', fontWeight: '600' }} className="classname-518">
                                                 {e?.jobs?.selected_queries}
                                             </Stack>
+
+                                            <Stack sx={{ color: 'black', fontWeight: "500", fontSize: 15 }} className="classname-517">
+                                                {e?.jobs?.choose_service && <div> {e.jobs.choose_service}</div>}
+                                            </Stack>
+
+
+
                                             <Stack ml={-0.3} flexDirection={'row'} alignItems={'center'}>
                                                 <Stack>
                                                     <IoLocationSharp size={13} color={vendor_color} />

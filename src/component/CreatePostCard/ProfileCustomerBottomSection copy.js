@@ -24,7 +24,7 @@ const ProfileCustomerBottomSection = () => {
         handleClose()
         // navigate('/')
         // window.location.reload();
-        window.location.href = 'https://honesthome.appssols.com/';
+        window.location.href = 'https://honesthomehub.com/';
      }
      const [isOpen, setIsOpen] = useState(false);
      const openPopup = () => {
@@ -54,7 +54,7 @@ const ProfileCustomerBottomSection = () => {
                     <img src={logout} className="setting-button" style={{ width: '5%' }} onClick={LogoutHandle} />
                 </Stack>
                 <Stack mt={1} flexDirection={"row"} justifyContent={'space-between'} alignItems={'center'} style={{ borderBottom: '1px solid #002758' }} className="classname-559">
-                    <Stack sx={{ color: '#002758', fontSize: { md: 30, lg: 30, sm: 20, xs: 17 }, fontWeight: 'bold', mt: 1 }} className="classname-560">Upcoming Request’s</Stack>
+                    <Stack sx={{ color: '#002758', fontSize: { md: 30, lg: 30, sm: 20, xs: 17 }, fontWeight: 'bold', mt: 1 }} className="classname-560">Upcoming Requests</Stack>
                     <Stack sx={{ mt: 1 }} className="classname-561">
                         {/* <CreateJobModal /> */}
                     </Stack>

@@ -10,10 +10,8 @@ import { get_customer_schedule_async_service, respond_to_customer_schedule_async
 // import { RxCross1 } from "react-icons/rx";
 // import { FaCheck } from "react-icons/fa";
 
-
 import  RxCross1  from "../../../src/assets/cross.png";
 import  FaCheck  from "../../../src/assets/right.png";
-
 
 import { asyncStatus } from '../../utils/async_status';
 import { apiHandle } from '../../config/apiHandle/apiHandle';
@@ -28,7 +26,7 @@ import cross from '../../../src/assets/new/cross.png'
 import VendorPopup from './ViewVendorProfile';
 import PickedVendor from './PickedVendor';
 import ReviewModal from '../Community/ReviewModel';
-
+import ViewVendorProfile from './ViewProfileVendor-CustomerShedule';
 
 const CustomerScheduledProjectCard = () => {
 
@@ -68,14 +66,12 @@ const CustomerScheduledProjectCard = () => {
         // Handle the response from the server (if needed)
     });
 
-
     socket.on('requestResponse', (data) => {
         console.log('samjho ho gya :', data);
         // Handle the response from the server (if needed)
     });
 
     // console.log("get_customer_schedule_data", get_customer_schedule_data);
-
 
     const AcceptHanlde = (id) => {
         // console.log(id);
@@ -147,7 +143,6 @@ const CustomerScheduledProjectCard = () => {
     console.log(get_customer_schedule_data,"DATATATATATATATATATATTSTSTSTSSSSSS")
 
 
-
     const [isOpen, setIsOpen] = useState(false);
 
     const openPopup = () => {
@@ -158,7 +153,6 @@ const CustomerScheduledProjectCard = () => {
       setIsOpen(false);
     };
 
-
  
     
   
@@ -166,17 +160,15 @@ const CustomerScheduledProjectCard = () => {
 
 
 
-
     return (
 
-        <div className="classname-440">
+        <div className="classname-440 RR">
             
         {/* <button onClick={openPopup}>Picked Vendors</button> */}
         
-        {/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Landscaping").slice(0, 3).map((e, i) => (
+         {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Landscaping").slice(0, 3).map((e, i) => (
     // Render logic for the first three entries with selected_queries equal to "Landscaping"
-    <div>
-
+    <div className='darshan3'>
 
     <Stack key={i} sx={{ backgroundColor: '#FFFFFF', p: 1, borderRadius: "10px", position: 'relative', mt: 1 }} 
     
@@ -184,11 +176,17 @@ const CustomerScheduledProjectCard = () => {
     className='classname-442 customer_shedule1    notpicked'>
 
 
-
         <Stack className='classname-443 backimage'>
             <div style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #002758' }}>
                 <Stack sx={{ fontSize: 24, color: '#002758', fontWeight: 'bold' }} className='classname-444 customer_shedule3'>{e.Name}</Stack>
             </div>
+
+            <div  style={{ display: 'flex', justifyContent: 'center',  }} className='vendor-view-button'>
+
+<ViewVendorProfile vendorID={e.vendorId}/>
+    </div>
+
+
             <Stack flexDirection={'row'} alignItems={'center'} mt={0.5} className='classname-445 customer_shedule10'>
                 <Stack className='classname-446 customer_shedule11'>
                     <IoLocationSharp size={22} color={user_color} />
@@ -228,8 +226,11 @@ const CustomerScheduledProjectCard = () => {
                         <IoLocationSharp size={22} color={user_color} />
                     </Stack>
                     <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-465 customer_shedule32'>
-                        Note:
+                        Quote:
                     </Stack>
+
+                   
+
                     <Stack sx={{ fontSize: 18, color: '#002758' }} className='classname-466 customer_shedule33'>{e.shedule_descriptions ? e.shedule_descriptions : '--'}</Stack>
                 </Stack>
             </Stack>
@@ -249,23 +250,22 @@ const CustomerScheduledProjectCard = () => {
                 ) : (
                     <Stack className='classname-471 customer_shedule7'>
                         {e.Paystatus === "Paid" && e.scheduleId === e.scheduleId ? (
-                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat Now" />
+                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat/Quote Now" />
                         ) : (
                             <>
                                 {e.Paystatus === "Payment Created" && (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
                                     <PaymentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} shedule_id={e.scheduleId} job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                 )}
-                                <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat Now" />
+                                <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat/Quote Now" />
                             </>
                         )}
                     </Stack>
                 )}
 
-
 <div>
                                         {console.log(e.Paystatus,"payment ")}
 
-                                        { (e.Paystatus === "Paid" ) ?
+                                        { (e.Paystatus === "Paid" && e.NumberofInstallments===undefined && e.ReviewPosted===undefined) ?
                                         (   
                                                 <ReviewModal shedule_id={e.scheduleId}  job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                         
@@ -275,7 +275,6 @@ const CustomerScheduledProjectCard = () => {
                                         }
                                             
                                         </div>
-
 
 
 
@@ -295,17 +294,14 @@ const CustomerScheduledProjectCard = () => {
             </Stack>
         </Stack>
 
-
     </Stack>
     </div>
-))} */}
+))} 
 
 
-
-{/* {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Cleaning").slice(0, 3).map((e, i) => (
+ {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries === "Cleaning").slice(0, 3).map((e, i) => (
     // Render logic for the first three entries with selected_queries equal to "Landscaping"
-    <div>
-
+    <div  className='darshan2'>
 
     <Stack key={i} sx={{ backgroundColor: '#FFFFFF', p: 1, borderRadius: "10px", position: 'relative', mt: 1 }} 
     
@@ -313,11 +309,15 @@ const CustomerScheduledProjectCard = () => {
     className='classname-442 customer_shedule1    notpicked'>
 
 
-
         <Stack className='classname-443 backimage'>
             <div style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #002758' }}>
                 <Stack sx={{ fontSize: 24, color: '#002758', fontWeight: 'bold' }} className='classname-444 customer_shedule3'>{e.Name}</Stack>
             </div>
+            <div  style={{ display: 'flex', justifyContent: 'center',  }} className='vendor-view-button'>
+
+<ViewVendorProfile vendorID={e.vendorId}/>
+    </div>
+
             <Stack flexDirection={'row'} alignItems={'center'} mt={0.5} className='classname-445 customer_shedule10'>
                 <Stack className='classname-446 customer_shedule11'>
                     <IoLocationSharp size={22} color={user_color} />
@@ -357,7 +357,7 @@ const CustomerScheduledProjectCard = () => {
                         <IoLocationSharp size={22} color={user_color} />
                     </Stack>
                     <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-465 customer_shedule32'>
-                        Note:
+                        Quote:
                     </Stack>
                     <Stack sx={{ fontSize: 18, color: '#002758' }} className='classname-466 customer_shedule33'>{e.shedule_descriptions ? e.shedule_descriptions : '--'}</Stack>
                 </Stack>
@@ -378,23 +378,22 @@ const CustomerScheduledProjectCard = () => {
                 ) : (
                     <Stack className='classname-471 customer_shedule7'>
                         {e.Paystatus === "Paid" && e.scheduleId === e.scheduleId ? (
-                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat Now" />
+                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat/Quote Now" />
                         ) : (
                             <>
                                 {e.Paystatus === "Payment Created" && (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
                                     <PaymentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} shedule_id={e.scheduleId} job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                 )}
-                                <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat Now" />
+                            <GigButton className='classname-473 customer_shedule9' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: '#F0F0F0', color: "#01BAF2", padding: '3px', width: '120px', height: '40px', borderRadius: '5px', fontWeight: 'bold' }} title="Chat/Quote Now" />
                             </>
                         )}
                     </Stack>
                 )}
 
-
 <div>
                                         {console.log(e.Paystatus,"payment ")}
 
-                                        { (e.Paystatus === "Paid" ) ?
+                                        { (e.Paystatus === "Paid" && e.NumberofInstallments===undefined && e.ReviewPosted===undefined ) ?
                                         (   
                                                 <ReviewModal shedule_id={e.scheduleId}  job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                         
@@ -404,7 +403,6 @@ const CustomerScheduledProjectCard = () => {
                                         }
                                             
                                         </div>
-
 
 
 
@@ -430,11 +428,9 @@ const CustomerScheduledProjectCard = () => {
             </Stack>
         </Stack>
 
-
     </Stack>
     </div>
-))} */}
-
+))} 
 
 
 
@@ -447,8 +443,7 @@ const CustomerScheduledProjectCard = () => {
 {get_customer_schedule_data?.filter(e => e.customerJobDetails.selected_queries !== "Landscaping" &&  e.customerJobDetails.selected_queries !== "Cleaning").map((e, i) => (
     // Render logic for the entries with selected_queries not equal to "Landscaping"
 
-    <div>
-
+    <div  className='darshan1'>
 
     <Stack key={i} sx={{ backgroundColor: '#FFFFFF', p: 1, borderRadius: "10px", position: 'relative', mt: 1 }} 
     
@@ -456,17 +451,24 @@ const CustomerScheduledProjectCard = () => {
     className='classname-442 customer_shedule1    notpicked'>
 
 
-
         <Stack className='classname-443 backimage'>
+       
             <div style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid #002758' }}>
                 <Stack sx={{ fontSize: 24, color: '#002758', fontWeight: 'bold' }} className='classname-444 customer_shedule3'>{e.Name}</Stack>
             </div>
+
+                <div  style={{ display: 'flex', justifyContent: 'center',  }} className='vendor-view-button'>
+
+            <ViewVendorProfile vendorID={e.vendorId}/>
+                </div>
             <Stack flexDirection={'row'} alignItems={'center'} mt={0.5} className='classname-445 customer_shedule10'>
                 <Stack className='classname-446 customer_shedule11'>
                     <IoLocationSharp size={22} color={user_color} />
                 </Stack>
                 <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-447 customer_shedule12'>{e.Home_Address}</Stack>
             </Stack>
+
+           
             <Stack flexDirection={'row'} alignItems={'center'} justifyContent={'space-between'} mt={1} className='classname-448 customer_shedule13'>
                 <Stack flexDirection={'row'} alignItems={'center'} gap={0.3} className='classname-449 customer_shedule14'>
                     <Stack className='classname-450 customer_shedule15'>
@@ -500,8 +502,14 @@ const CustomerScheduledProjectCard = () => {
                         <IoLocationSharp size={22} color={user_color} />
                     </Stack>
                     <Stack sx={{ fontSize: 18, color: '#002758', fontWeight: 500 }} ml={1} className='classname-465 customer_shedule32'>
-                        Note:
+                        Quote:
                     </Stack>
+
+                    
+                    
+                 
+
+
                     <Stack sx={{ fontSize: 18, color: '#002758' }} className='classname-466 customer_shedule33'>{e.shedule_descriptions ? e.shedule_descriptions : '--'}</Stack>
                 </Stack>
             </Stack>
@@ -521,7 +529,7 @@ const CustomerScheduledProjectCard = () => {
                 ) : (
                     <Stack className='classname-471 customer_shedule7'>
                         {e.Paystatus === "Paid" && e.scheduleId === e.scheduleId ? (
-                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat Now" />
+                            <GigButton className='classname-472 customer_shedule8' onClick={() => sendDataToParent(e, i + 1)} style={{ backgroundColor: "user_color", color: "white", padding: '3px', width: '120px', height: '40px' }} title="Chat/Quote Now" />
                         ) : (
                             <>
                                 {e.Paystatus === "Payment Created" &&  (e.NumberofInstallments === 0 || !e.NumberofInstallments) && (
@@ -536,7 +544,7 @@ const CustomerScheduledProjectCard = () => {
 <div>
                                         {console.log(e.Paystatus,"payment ")}
 
-                                        { (e.Paystatus === "Paid" && e.NumberofInstallments===null) ?
+                                        { (e.Paystatus === "Paid" && e.NumberofInstallments===undefined && e.ReviewPosted===undefined) ?
                                         (   
                                                 <ReviewModal shedule_id={e.scheduleId}  job_id={e.jobId} customer_id={e.customerId} vendor_id={e.vendorId} />
                                         
@@ -550,7 +558,6 @@ const CustomerScheduledProjectCard = () => {
 
 
 
-
                 <div>
                     {console.log(e.NumberofInstallmentsMatching, "numberofinstallments")}
                     {e.NumberofInstallmentsMatching <= e.NumberofInstallments   && e.status ==="accepted"?
@@ -558,20 +565,23 @@ const CustomerScheduledProjectCard = () => {
                             <InstallmentModal parent_check_status={parent_check_status} set_selected_index={setSet_index} get_schedule_data={e} save_index={i} number={e.NumberofInstallmentsMatching} />
                         ) : (null)}
                 </div>
+
+
+
+              
+                   
+               
             </Stack>
         </Stack>
-
 
     </Stack>
     </div>
 
-))}
-
+))} 
 
 
 
 </div>
-
 
 
 
@@ -585,3 +595,4 @@ const CustomerScheduledProjectCard = () => {
 }
 
 export default CustomerScheduledProjectCard 
+

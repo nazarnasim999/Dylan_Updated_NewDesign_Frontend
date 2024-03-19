@@ -65,6 +65,11 @@ const CustomerProfileCard = () => {
   //   }
   // };
 // ts
+const firstName = customer_profile_data?.Name;
+  const split_firstname = customer_profile_data?.Name.split(' ')[0]
+
+
+
 const selectedImageHandle = async (e) => {
   const { files } = e.target;
   try {
@@ -213,7 +218,12 @@ useEffect(() => {
                                 src={selectedImage || customer_profile_data?.Profile_Image}
                             />
                             <Stack flexDirection={"column"}>
-                                <span className="classname-436" style={{ paddingLeft: '20px', fontWeight: 'bold', fontSize: '40px' }}>{customer_profile_data?.Name}</span>
+                                <span className="classname-436" style={{ paddingLeft: '20px', fontWeight: 'bold', fontSize: '40px' }}>
+                                  
+                                  {/* {customer_profile_data?.Name} */}
+                                  {split_firstname}
+                                
+                                </span>
                                 <p className="classname-437" style={{ paddingLeft: '20px', fontWeight: 'bold', fontSize: '25px', color: '#01BAF2' }}>Customer</p>
                             </Stack>
                         </div>

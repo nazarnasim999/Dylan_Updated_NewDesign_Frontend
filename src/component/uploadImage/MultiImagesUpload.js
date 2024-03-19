@@ -4,7 +4,7 @@ import { IoAddSharp } from "react-icons/io5";
 import axios from 'axios';
 import { baseURL } from "../../config/apiHandle/apiHandle";
 
-const squareSize = "500px";
+const squareSize = "150px";
 const squareSizes = "150px";
 
 

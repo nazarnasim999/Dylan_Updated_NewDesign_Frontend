@@ -63,7 +63,7 @@ const TabLoginCustomer = () => {
                     setData({ ...data, password: e.target.value })
                 } type="password" id="pass" name="password" placeholder="Enter your Password" required="" />
             </div>
-            <Link to={'/forgotpasswordv'}>
+            <Link to={'/forgotpassword'}>
             <p className='forgotall'>Forgot Password?</p>
             </Link>
             <div className='btn-singup'>

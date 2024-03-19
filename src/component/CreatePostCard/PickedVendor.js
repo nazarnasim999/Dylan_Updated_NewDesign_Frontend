@@ -210,7 +210,7 @@ const PickedVendor = () => {
         };
     
         try {
-            const res = await axios.post(`https://dilannazartsbackendtest-production.up.railway.app/postpickedvendor`, formData);
+            const res = await axios.post(`https://honesthome-backend-6d8f37871a1b.herokuapp.com/postpickedvendor`, formData);
             console.log("PICKED VENDOR POSTED");
             toast.success("Vendor Selected Successfully!")
             window.location.reload()
@@ -254,7 +254,7 @@ const PickedVendor = () => {
     return (
 
 
-        <div className="classname-440">
+        <div className="classname-4402">
 
                         <button onClick={togglePopup} className='showpickedvendor'>
                             Select Vendor

@@ -87,10 +87,10 @@ export default function ViewCustomerProfileModal({ get_profile_data }) {
               </Stack>
             </Grid>
             <Grid item md={6} lg={6} sm={12} xs={12} className="classname287">
-              <Stack className="classname288" px={2} mt={1} flexDirection={'row'} alignItems={'center'} gap={1} sx={{ mt: 2 }}>
+              {/* <Stack className="classname288" px={2} mt={1} flexDirection={'row'} alignItems={'center'} gap={1} sx={{ mt: 2 }}>
                 <Stack sx={{ fontSize: 17, fontWeight: 1000, color: '#002758' }}>Email: </Stack>
                 <Stack sx={{ color: '#002758' }}>{get_profile_data?.userDetails?.email}</Stack>
-              </Stack>
+              </Stack> */}
             </Grid>
             <Grid item md={12} lg={12} sm={12} xs={12} className="classname289">
               <Stack className="classname290" px={2} flexDirection={'row'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }}>

@@ -52,7 +52,7 @@ const VendorScheduledProjectCard = () => {
                     console.log("eeeeeee", e);
                     return <Stack sx={{ backgroundColor: 'white', borderRadius: "15px", position: 'relative', height: 180, mt: 1, width: '550px' }} className='shedule_card classname-442' style={{padding:'8px'}}>
                        <Stack className='classname-443'>  
-                        <Stack sx={{ flexDirection: 'row', alignItems: 'start', justifyContent: 'center' }}>
+                        <Stack sx={{ flexDirection: 'row', alignItems: 'start', justifyContent: 'center' }} className='dylanshedule'>
                           <Stack sx={{ fontSize: { md: 15, lg: 20, sm: 16, xs: 13 }, color: main_color, fontWeight: 'bold' }} style={{
                                 justifyContent: 'center'
                             }}>{e.customerDetails?.Name}</Stack>
@@ -71,7 +71,8 @@ const VendorScheduledProjectCard = () => {
                                     <GoClock size={16} color={vendor_color} className="classname-606" />
                                 </Stack>
                                 <Stack sx={{ fontSize: { md: 13, lg: 18, sm: 12, xs: 10 }, color: main_color, }} className="classname-607">
-                                    {e.date ? formatDate(e.date) : '12-12-12'}
+                                    {/* {e.date ? formatDate(e.date) : '12-12-12'} */}
+                                    {e.date && e.date === '2000-01-01' ? '--' : formatDate(e.date)}
                                 </Stack>
                             </Stack>
                         </Stack>
@@ -81,7 +82,7 @@ const VendorScheduledProjectCard = () => {
                                     <GoClock size={16} color={vendor_color} className="classname-608" />
                                 </Stack>
                                 <Stack sx={{ fontSize: { md: 13, lg: 18, sm: 12, xs: 10 }, color: main_color, }} className="classname-609">
-                                    {e.time ? formatTime(e.time) : '00:00'}
+                                    {e.time ? formatTime(e.time) : '--'}
                                 </Stack>
                             </Stack>
                         </Stack>

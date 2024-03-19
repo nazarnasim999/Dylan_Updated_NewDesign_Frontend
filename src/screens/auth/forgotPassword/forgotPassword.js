@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Input from "../../../component/input/Input";
 import { reset_password_request_otp_async } from "../../../services/authService";
 import { asyncStatus } from "../../../utils/async_status";
-import logo from '../../../assets/honestlogo.png'
+import logo from '../../../assets/new/2222.png'
 
 const ForgotPassword = () => {
   const navigation = useNavigate();
@@ -40,7 +40,7 @@ const ForgotPassword = () => {
 
       }}
 
-      className="main_container"
+      className="main_container forgot"
     >
       <Container maxWidth={"md"} sx={{ p: { md: 5, lg: 5, sm: 0, xs: 0 }, justifyContent: 'center', alignItems: 'center' }}>
         <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }} >
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
                 <img   className="thala" width={150} height={150} src={logo} />
               </Stack>
               <Stack className="titleing">Forgot password</Stack>
-              <Stack className="otp_sub" sx={{ color: "#686868", mt: 1, fontSize: 10 }}>
+              <Stack className="otp_sub" sx={{ color: "#686868", mt: 1, fontSize: 15 }}>
                 The Verification Email will be sent to the mailbox. please check it
                 !
               </Stack>
@@ -79,6 +79,23 @@ const ForgotPassword = () => {
                       // loading={forgot_status === asyncStatus.LOADING}
                       onClick={() => verifyHandle()}
                       label={"Send"}
+
+                      style={{
+                        
+                        
+                        backgroundColor:'#1AC1F3',
+                        height:'50px',
+                        width:'100px',
+                        borderRadius:'10px',
+                        color:'white',
+                        fontWeight:'400',
+                        border:'1px solid #1AC1F3'
+
+                    
+                    
+                    
+                    
+                    }}
                       
                     />
                   </Grid>

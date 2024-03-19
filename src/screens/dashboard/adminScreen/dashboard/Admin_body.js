@@ -116,7 +116,7 @@ let talha;
             console.log("local user id OF ADMIN ",storedUserId)
 
 
-   axios.get(`https://dilannazartsbackendtest-production.up.railway.app/getadmin/${storedUserId}`)
+   axios.get(`https://honesthome-backend-6d8f37871a1b.herokuapp.com/getadmin/${storedUserId}`)
                 .then(response => {
                   console.log('ResponseADMIN ID12344:', response.data.rec[0]);
                    talha = response.data.rec[0];
@@ -424,7 +424,7 @@ console.log(selectedQueries,"TS"); // Output: ["Plumbing"]
           }}
           
         
-        >Back To Customer Chat</button>
+        >Back</button>
       </Stack>
     )}
                                             

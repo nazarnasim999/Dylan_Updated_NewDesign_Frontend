@@ -74,7 +74,7 @@ console.log(_id,"Saskldakldjaksdjaksdjakldjaskjkldjajdskldjklasjdklsjdakldjlkadk
 // https://dylan-production.up.railway.app
 
 try {
-  const response =  await axios.post('https://dilannazartsbackendtest-production.up.railway.app/delete-expert-gig', { _id });
+  const response =  await axios.post('https://honesthome-backend-6d8f37871a1b.herokuapp.com/delete-expert-gig', { _id });
   console.log(response);
 
   window.location.reload();

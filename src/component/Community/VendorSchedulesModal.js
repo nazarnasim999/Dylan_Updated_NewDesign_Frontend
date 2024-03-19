@@ -121,6 +121,8 @@ const handlecloseinstallment = ()=> setinstallmentopen(false);
   const handleOpens = () => setOpens(true);
   const handleCloses = () => setOpens(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDateIndex, setSelectedDateIndex] = useState(null);
+
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
@@ -169,6 +171,13 @@ const handlecloseinstallment = ()=> setinstallmentopen(false);
     setData({ ...data, duration: e.target.value });
   };
 
+
+  const handleInputTitlejobtime = (e) => {
+    console.log(e.target.value)
+    setData({ ...data, jobtime: e.target.value });
+  };
+
+
   // const handleInputLocation = (e) => {
   //   console.log(e.target.value)
   //   setData({ ...data, cost: e.target.value });
@@ -186,6 +195,13 @@ const handlecloseinstallment = ()=> setinstallmentopen(false);
     }
   };
 
+
+
+const handleTimeInput=(e)=>{
+  console.log(e.target.value)
+  setData({ ...data, JobTime: e.target.value });
+
+}
 
 
   const handleInputFromtime = (e) => {
@@ -207,6 +223,7 @@ const handlecloseinstallment = ()=> setinstallmentopen(false);
     console.log('hey', date, 'Index:', index)
     
     setSelectedDate(date);
+    setSelectedDateIndex(index)
     setData({ ...data, date: date, index: index });
   };
 
@@ -264,6 +281,7 @@ console.log(receivedObject.job_details._id,"ZZZZZZZZZZZZZZZZZZZZZZZZZZYYYYYMAAAA
       customerJobDetails: {
         images: receivedObject.job_details?.images,
         details: receivedObject.job_details?.details,
+        selected_queries: receivedObject.job_details?.selected_queries
         // customer_job_id: receivedObject.job_details?._id
       },
       customerDetails: {
@@ -277,6 +295,15 @@ console.log(receivedObject.job_details._id,"ZZZZZZZZZZZZZZZZZZZZZZZZZZYYYYYMAAAA
       vendorBudget:"0.00",
       ...data
     }
+    let time= data.time
+    let date= data.date
+
+    const dateObject = new Date(date);
+    const formattedDate = dateObject.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
     // shedule_description
     
 
@@ -288,11 +315,36 @@ console.log(receivedObject.job_details._id,"ZZZZZZZZZZZZZZZZZZZZZZZZZZYYYYYMAAAA
     if(!data.time && data.shedule_descriptions)
     {
       dispatch(create_schedule_async_service(obj))
+
+      const messageData = {
+        sender: storedUserId, // Assuming storedUserId is the vendorId
+        receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
+        message: `Shedule Created Successfully. Date: ${formattedDate}, Time: ${time}` 
+      };
+
+      socket.emit('send_message', messageData);
+
+
+
     }
 
     else if (data.time && !data.shedule_descriptions)
     {
       dispatch(create_schedule_async_service(obj))
+
+
+      const messageData = {
+        sender: storedUserId, // Assuming storedUserId is the vendorId
+        receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
+        message: `Shedule Created Successfully. Date: ${formattedDate}, Time: ${time}` 
+     
+     
+      };
+
+      socket.emit('send_message', messageData);
+
+
+
     }
     else {
       toast.error("Please Select Time", {
@@ -361,7 +413,7 @@ else {
       const messageData = {
         sender: storedUserId, // Assuming storedUserId is the vendorId
         receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
-        message: `Payment created successfully. Cost: ${obj.FullInstallmentCost}, Number of Installments: ${obj.NumberofInstallments}`, 
+        message: `Quote created successfully. Cost: ${obj.FullInstallmentCost}, Number of Installments: ${obj.NumberofInstallments} , Description: ${data.jobtime}`, 
       };
     
       // Emit chat message event with sender, receiver, and message
@@ -411,7 +463,7 @@ else {
       const messageData = {
         sender: storedUserId, // Assuming storedUserId is the vendorId
         receiver: receivedObject._id, // Assuming receivedObject._id is the customerId
-        message: `Payment created successfully. Cost: ${data.cost}, Duration: ${data.duration}`, 
+        message: `Quote created successfully. Cost: ${data.cost}, Description: ${data.duration} , Duration: ${data.jobtime}`, 
       };
     
       // Emit chat message event with sender, receiver, and message
@@ -442,6 +494,17 @@ else {
   }, [, create_schedule_status, create_payment_status, open]);
 
 // let job_id= ''
+
+
+const formatDatenew = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      
+  });
+};
 
   return (
     <div>
@@ -551,7 +614,7 @@ else {
               }}
             >
               {" "}
-              Create Shedule
+              Create Schedule
             </Stack>
           </Stack>
          
@@ -682,7 +745,7 @@ else {
           
           <Stack flexDirection={'row'} gap={1.5} justifyContent={'center'}>
       <Stack px={2} flexDirection={'column'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }} >
-        <Stack sx={{ fontSize: 17, fontWeight: 1000, color: 'black' }}>Availablity Date: </Stack>
+        <Stack sx={{ fontSize: 17, fontWeight: 1000, color: 'black' }}> Confirm Availablity: </Stack>
         {
 
           receivedObject.job_details?.availablity_time?.map((availability, index) => (
@@ -695,30 +758,41 @@ else {
   alignItems={'center'}
   gap={'80px'}
 >
-  {availability.date  && (
+  {availability?.date  && (
     <>
-      {console.log(receivedObject?.job_details?.time1, "job_detailssssssssssssssssssssttssssts")}
+      {console.log(receivedObject?.job_details?.availablity_time, "job_detailssssssssssssssssssssttssssts")}
       {console.log('Key1:', index)}
 
+     
+     {
+      availability?.date != null &&
+<>
+    
       <Stack 
         sx={{
-          color: selectedDate === availability.date ? 'red' : 'black',
+          color: selectedDate === availability.date && selectedDateIndex === index ? 'red' : 'black',
           cursor: 'pointer',
         }}
         onClick={() => handleDateClick(availability.date, index)}
       > 
-      {availability.date==='2000-01-01' ? 
+      {availability.date==='2000-01-01' || availability.date == undefined 
+      || receivedObject.job_details.availablity_time === ''? 
       
      
       <Stack   className="inputshedule">
+          <p style={{textAlign:'center'}}>{receivedObject.job_details.amount}</p>
+
+
       <input 
      
-        placeholder="Enter Date and Time"
+        placeholder="Yes or No"
 
       
       type="text"
       value={data.shedule_descriptions}
       onChange={(e) => setshedule_description(e)}
+        style={{textAlign:'center'}}
+
     >
     
       </input>
@@ -726,12 +800,25 @@ else {
       </Stack>
       
       : 
-        new Intl.DateTimeFormat('en-US', {
+        // new Intl.DateTimeFormat('en-US', {
+        //   month: 'long',
+        //   day: 'numeric',
+        //   year: 'numeric',
+        // }).format(new Date(availability.date && availability.date != null? availability.date :'Selected' ))}
+
+        new Date(availability.date && availability.date != null ? availability.date : 'Selected').toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
-          day: 'numeric',
-        }).format(new Date(availability.date ))}
+          day: 'numeric'
+        })
+      }
+
+      
       </Stack>
+      </>
+       }
+
+       
       <Stack
         flexDirection={'row'}
         alignItems={'center'}
@@ -764,6 +851,9 @@ else {
       </Stack>
     </>
   )}
+
+
+
 </Stack>
 
           ))
@@ -795,7 +885,7 @@ else {
           }}
             onClick={submitHandle}
           >
-            Sumbit
+            Submit
           </button>
           </Stack>
 
@@ -856,7 +946,7 @@ else {
        
        <TextField
        className="create_payment"
-         label="Job Details"
+         label="Job Description"
          variant="outlined"
          fullWidth
          name="duration"
@@ -882,7 +972,7 @@ else {
 
 
     
-       <br/>
+       
        <TextField
         
 
@@ -910,6 +1000,35 @@ else {
 
          
        />
+
+       <br/>
+
+       <TextField
+       className="create_payment"
+         label="Job Time"
+         variant="outlined"
+         fullWidth
+         name="duration"
+         value={data.jobtime}
+
+         onChange={handleInputTitlejobtime}
+       
+
+         sx={{
+           '& .MuiInput-root': {
+             borderBottom: '1px solid black', // Border only at the bottom
+             borderTop: 'none', // No top border
+             borderLeft: 'none', // No left border
+             borderRight: 'none', // No right border
+           },
+           '&:hover .MuiInput-root': {
+             borderBottom: '2px solid black', // Increase border thickness on hover
+           },
+         }}
+         
+       />
+
+       
      </Stack>
           
        
@@ -1033,7 +1152,7 @@ else {
        />
      <br/>
     
-       <br/>
+       
        <TextField
         
 
@@ -1061,6 +1180,36 @@ else {
 
          
        />
+
+        <br/>
+
+
+<TextField
+       className="create_payment"
+         label="Job Description/Time"
+         variant="outlined"
+         fullWidth
+         name="duration"
+         value={data.jobtime}
+
+         onChange={handleInputTitlejobtime}
+       
+
+         sx={{
+           '& .MuiInput-root': {
+             borderBottom: '1px solid black', // Border only at the bottom
+             borderTop: 'none', // No top border
+             borderLeft: 'none', // No left border
+             borderRight: 'none', // No right border
+           },
+           '&:hover .MuiInput-root': {
+             borderBottom: '2px solid black', // Increase border thickness on hover
+           },
+         }}
+         
+       />
+
+
      </Stack>
           
        

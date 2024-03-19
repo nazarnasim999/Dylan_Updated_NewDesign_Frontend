@@ -15,7 +15,7 @@ export default function Select_selected_queries({ setSelect_Queries, option_Firs
   // console.log(selectOne)
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: '97%' }}>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: '97%' }} className="listts">
         {/* <InputLabel id="demo-simple-select-standard-label">Select</InputLabel> */}
         <Select
         className="query"
@@ -26,6 +26,9 @@ export default function Select_selected_queries({ setSelect_Queries, option_Firs
           name="privacy"
           defaultValue={"public"}
           onChange={handleChange}
+         
+
+       
 
         >
           {/* <MenuItem disabled>Select Privacy</MenuItem> */}

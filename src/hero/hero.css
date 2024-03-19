@@ -5,6 +5,79 @@ th {
     background-color: #01BAF2;
     color: #fff;
 }
+.ADMIN1 .MuiBox-root.css-k008qs {
+    justify-content: flex-end !important;
+}
+
+.logo-div ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 0px;
+    width: 3000px;
+    align-items: center;
+    justify-content: center;
+    animation: scroll 20s cubic-bezier(1, 0.99, 0, 0) infinite; /* Add keyframes for animation */
+    transform: translate(1%, 0px);
+}
+
+
+.logo-div {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.popupjob{
+
+    border: 3px solid transparent !important;
+   background-image: url('../assets/Frame\ 153.png') !important;
+    background-size: cover !important;
+    background-color: white !important;
+    padding: 25px;
+    color: #002758;
+    top: 20%;
+    left: 46%;
+}
+
+
+.popup-boxjob {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+}
+
+.classname3031{
+
+   
+}
+
+.delete-button-job {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.delete-button-job button{
+    border-radius: 10px;
+    background-color: rgb(1, 186, 242);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+
+}
+
+
+
+
+.random3{
+    display: block !important;
+}
 
 .Stripe_form.unique-class-77 {
     width: 500px;
@@ -45,7 +118,9 @@ label.unique-class-80 {
 
 
 
-
+.MuiStack-root.adminbutton.css-88m2a8-MuiStack-root{
+    top: 10px !important;
+}
 
 
 
@@ -82,6 +157,15 @@ table {
    background-image: url('../assets/Frame\ 153.png') !important;
     background-size: cover !important;
     background-color: white !important;
+}
+
+
+.forgot{
+    background-image: url('../assets/Frame\ 153.png') !important;
+    background-size: cover !important;
+    background-color: #DEF7FF !important;
+
+
 }
 
 
@@ -401,17 +485,17 @@ box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
 
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 0px;
   }
 
   ::-webkit-scrollbar:horizontal {
-    height: 3px;
+    height: 0px;
 }
 
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #002758; 
   }
    
   /* Handle */
@@ -543,7 +627,7 @@ background: #01BAF2;
 }
 .customer_shedule1 {
     width: 290px;
-    height: 300px;
+    height: 310px;
     border: 1px solid #01BAF2 !important;
 }
 .customer_shedule7 {
@@ -751,6 +835,38 @@ ol.carousel-indicators {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.forgot{
+
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.forgot_container {
+    width: 420px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 12px;
+    border-radius: 12px;
+    background-image: url(/src/assets/new/back.png);
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.random_forgot_otp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
 .atlogo {
     width: 100%;
 }
@@ -785,7 +901,7 @@ ol.carousel-indicators {
 }
 .main_container-my{
     background-color: #DEF7FF;
-    height: 100%;
+    height: 100vh;
     background-image: url(/src/assets/new/back.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -1078,8 +1194,23 @@ img.image_slider.unique-class-49 {
 
 
 
+.hello-ahti {
+    width: 85% !important;
+}
 
+.screen_position_container {
+    display: flex;
+    justify-content: flex-end  !important;
+    width: 100% !important ;
+}
+.MuiStack-root.admin-69.css-nen11g-MuiStack-root {
 
+    min-width: 999px !important;
+}
+
+.class-2399{
+    width: 100%;
+}
 
 
 
@@ -1127,7 +1258,10 @@ img.image_slider.unique-class-49 {
 
 
 
-
+.MuiStack-root.admin-69.css-nen11g-MuiStack-root {
+ 
+    min-width: 600px !important;
+}
 
 
 
@@ -1299,7 +1433,29 @@ img.setting-button {
 button.showpickedvendor {
     font-size: 16px !important;
 }
+
+.ADMIN1 .MuiBox-root.css-k008qs {
+    justify-content: flex-end !important;
 }
+
+
+.screen_position_container {width: 100%;display: flex;justify-content: flex-end;}
+
+.hello-ahti {
+    width: 90%;
+}
+}
+
+.MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.popupjob{
+
+    width: 30%;
+}
+
 
 @media screen and (max-width: 1440px){
     .logo-container-1 {
@@ -1361,6 +1517,11 @@ button.showpickedvendor {
     }
 
 
+    .MuiStack-root.admin-69.css-nen11g-MuiStack-root {
+ 
+        min-width: 500px !important;
+    }
+
     .admin-logo-body span h2 {
         font-size: 22px;
         margin: 0px;
@@ -1414,7 +1575,23 @@ button.showpickedvendor {
         padding: 0px !important;
         margin: 0px !important;
     }
-    
+    .ADMIN1 .MuiBox-root.css-k008qs {
+        justify-content: flex-end !important;
+    }
+    .hello-ahti {
+        width: 84%;
+    }
+    .MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .popupjob{
+
+        width: 30%;
+    }
+
+
 }
 
 
@@ -1422,6 +1599,22 @@ button.showpickedvendor {
     .admin-imger-body {
         padding-top: 185px !important;
     }
+    .ADMIN1 .MuiBox-root.css-k008qs {
+        justify-content: flex-end !important;
+    }
+    .MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+
+    .popupjob{
+
+        width: 30%;
+    }
+
+
+
 }
 
 @media screen and (max-width: 1024px){
@@ -1435,7 +1628,7 @@ button.showpickedvendor {
         border-radius: 8px;
     }
     .from-btn-1 {
-        padding-bottom: 10px;
+        padding-bottom: 10px;   
     }
     .form-group-1 input {
         font-size: 12px;
@@ -1636,6 +1829,38 @@ img.img_control {
 .sidebar-admin {
     width: 48%;
 }
+
+
+.hello-ahti {
+    width: 80%;
+}
+
+.MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+
+
+.hello-ahti {
+    width: 100% !important;
+}
+
+
+.MuiStack-root.admin-69.css-nen11g-MuiStack-root {
+ 
+    min-width: 100% !important;
+}
+
+.popupjob{
+
+    left: 48%;
+}
+
+
+
+
 }
 
 @media screen and (max-width: 768px){
@@ -1745,7 +1970,25 @@ input.inputStyle {
     display: flex !important;
     flex-direction: column !important;
 }
+.hello-ahti {
+    width: 70%;
+}
 
+.MuiStack-root.adminbutton.css-88m2a8-MuiStack-root {
+    top: 48px !important;
+}
+
+
+
+
+.hello-ahti {
+    width: 75% !important;
+}
+
+.MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+    text-align: left !important;
+    width: 100% !important;
+}
 }
 
 @media screen and (max-width: 600px){
@@ -1851,7 +2094,7 @@ input.inputStyle {
     
     .customer_shedule1 {
         width: 265px !important;
-        height: 265px !important;
+        height: 300px !important;
     }
     
     .classname-440 {
@@ -2179,7 +2422,7 @@ button.showpickedvendor {
     padding: 0px 0px !important;
     width: 100% !important;
 }
-.classname-440 {
+.classname-4402 {
     width: 98% !important;
 }
 button#dropdown-basic {
@@ -2658,4 +2901,107 @@ img.img_control {
     width: 40% !important;
 }
 
+.dylanshedule{
+    
+        /* width: 100%;
+        margin-left: 200px; */
+    
+
 }
+
+h2.unique-class-79 {
+    font-size: 45px !important;
+}
+
+label.unique-class-80 {
+    width: 360px;
+}
+form.unique-class-78{
+    padding: 10px;
+    width: 65% !important;
+}
+
+.shedule_card{
+
+    width: 215px !important;
+}
+
+.MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+    width: 100% !important;
+}
+
+.MuiStack-root.adminbutton.css-88m2a8-MuiStack-root {
+    top: 48px !important;
+}
+.MuiStack-root.unique-class-30.css-nen11g-MuiStack-root {
+    text-align: left !important;
+    /* width: 100% !important; */
+}
+
+.hello-ahti {
+    width: 100% !important;
+}
+
+
+.class-279 .MuiStack-root.css-fqd73d-MuiStack-root {
+    padding: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+/* ahti */
+label.unique-class-80 {
+    width: 100% !important;
+}
+
+.MuiStack-root.class-283.css-nen11g-MuiStack-root {
+    width: 100% !important;
+}
+
+.MuiStack-root.classname-462.customer_shedule29.css-1evrnf6-MuiStack-root {}
+
+
+.MuiStack-root.class-283.css-nen11g-MuiStack-root form.unique-class-78 {
+    width: 100% !important;
+}
+
+
+.MuiStack-root.unique-class-30.css-j7qwjs {
+    width: 100%  !important;
+}
+
+
+.css-r8u8y9 {
+
+    height: 115px !important;
+}
+
+
+
+.popupjob{
+
+   
+    top: 35%;
+    font-size: 19px;
+    left: 50%;
+    width: 55%;
+}
+
+
+
+h5.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom.popup2222222.css-h93ljk-MuiTypography-root{
+    font-size: 19px;
+    text-align: center;
+}
+
+
+
+
+}
+

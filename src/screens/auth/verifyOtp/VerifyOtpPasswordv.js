@@ -13,7 +13,7 @@ import {
 } from "../../../services/authService";
 import { asyncStatus } from "../../../utils/async_status";
 import { hideEmailMethod } from "../../../utils/common/hide_email";
-import logo from '../../../assets/honestlogo.png'
+import logo from '../../../assets/new/2222.png'
 
 const VerifyOtpPasswordv = () => {
   const navigation = useNavigate();
@@ -77,9 +77,13 @@ const VerifyOtpPasswordv = () => {
         // backgroundColor: main_color,
         height: { md: "130vh", lg: "130vh", sm: "110vh", xs: "110vh" },
       }}
-      className="main_container"
+      className="main_containe forgot"
     >
-      <Container maxWidth={"sm"} sx={{ p: { md: 5, lg: 5, sm: 2, xs: 2 } }}>
+      <Container maxWidth={"sm"} sx={{ p: { md: 5, lg: 5, sm: 2, xs: 2 } }} 
+      
+      className="forgot_container"
+      
+      >
         <Stack
           sx={{
             // backgroundColor: "#FFFFFF",
@@ -101,15 +105,15 @@ const VerifyOtpPasswordv = () => {
             // textAlign={"center"}
             // justifyContent={"center"}
           >
-            <Stack sx={{ color: "#686868",textAlign:'start',fontSize:10 }}>
-              Enter the OTP you received at 
+            <Stack sx={{ color: "#686868",textAlign:'start',fontSize:15 }}>
+              Enter the OTP you received at:  {forgot_data} 
             </Stack>
-            <Stack
+            {/* <Stack
               className="otp_sub"
               sx={{ color: "black", ml: 0.3, fontWeight: "bold", color: "#686868",textAlign:'start',fontSize:10 }}
             >
               {forgot_data}
-            </Stack>
+            </Stack> */}
           </Stack>
           <Stack mt={2}>
             <Grid container spacing={0}>
@@ -127,13 +131,34 @@ const VerifyOtpPasswordv = () => {
                 </Stack>
               </Grid>
               <Grid  className="nazar" item md={12} lg={12} sm={12} xs={12} mt={4}>
-                <Btn
+              
+              <div className="random_forgot_otp"> 
+              <Btn
                   // loading={reset_otp_status === asyncStatus.LOADING}
                   onClick={() => verifyHandle()}
                   label={"Verify"}
                   // fullWidth={true}
+                  style={{
+                        
+                        
+                    backgroundColor:'#1AC1F3',
+                    height:'50px',
+                    width:'100px',
+                    borderRadius:'10px',
+                    color:'white',
+                    fontWeight:'400',
+                    border:'1px solid #1AC1F3'
+
+                
+                
+                
+                
+                }}
                  
                 />
+              </div>
+              
+           
               </Grid>
             </Grid>
           </Stack>

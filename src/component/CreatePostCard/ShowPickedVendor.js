@@ -133,7 +133,7 @@ const ShowPickedVendor = () => {
           const formData={
             SheduleID: scheduleId,
           }
-          axios.post(`http://localhost:5000/postpickedvendor`, formData)
+          axios.post(`https://honesthome-backend-6d8f37871a1b.herokuapp.com/postpickedvendor`, formData)
           .then((res) => {
             console.log("PICKED VENDOR POSTED");
           })
@@ -142,7 +142,7 @@ const ShowPickedVendor = () => {
           });
     }
     return (
-        <div className="classname-440">
+        <div className="classname-4410">
         {/* <button onClick={openPopup}>Picked Vendors</button> */}
 <div className='classname-441 customer_shedule'>
 {get_customer_schedule_data?.map((e, i) => (

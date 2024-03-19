@@ -11,6 +11,7 @@ import '../style.css'
 import { main_color } from '../../../utils/color';
 import Header from '../../header/Header';
 import Admin_Drawer_Side_Content from './Admin_Drawer_Side_Content';
+import { useState, useEffect } from 'react';
 
 const drawerWidth = 240;
 
@@ -21,7 +22,12 @@ interface Props {
 
 export default function Admin_Templates_SideBar(props: Props) {
   const { window, content_section } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+
+
 
   const handleDrawerToggle = () => {
     console.log('abcddcd');
@@ -80,6 +86,10 @@ export default function Admin_Templates_SideBar(props: Props) {
           </Stack>
         </Toolbar>
       </AppBar>
+      
+     
+
+     
       <div>
         {
           mobileOpen &&
@@ -121,10 +131,32 @@ export default function Admin_Templates_SideBar(props: Props) {
         </Drawer> */}
         </div>
          }
+
+          <Drawer
+
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+          }}
+          open
+        >
+          <Stack className='drawer_style' width={280} >
+
+            <Admin_Drawer_Side_Content />
+          </Stack>
+        </Drawer>
+
+         
         <div onClick={handleDrawerToggles}>
         {content_section}
         </div>
       </div>
+
+
+      
+      
+      
+    
       {/* <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
