@@ -38,7 +38,7 @@ const Footer1 = () => {
                             {/* <Stack className='footer-link'>Login</Stack> */}
 
                             <Stack className='footer-link'>
-         <Link href="/mainsection">Login</Link>
+         <Link href="/mainsection"   style={{textDecoration:"none",color:"white"}}>Login</Link>
               </Stack>
 
 
@@ -57,16 +57,16 @@ const Footer1 = () => {
 
 
                         <Stack className='footer-link'>
-         <Link href="/privacypolicy">Privacy Policy</Link>
+         <Link href="/privacypolicy" style={{textDecoration:"none",color:"white"}}>Privacy Policy</Link>
               </Stack>
 
               <Stack className='footer-link'>
-         <Link href="/customerpolicy">Customer's Guide</Link>
+         <Link href="/customerpolicy" style={{textDecoration:"none",color:"white"}}>Customer's Guide</Link>
               </Stack>
 
 
               <Stack className='footer-link'>
-         <Link href="/vendorpolicy">Vendor's Guide</Link>
+         <Link href="/vendorpolicy" style={{textDecoration:"none",color:"white"}}>Vendor's Guide</Link>
               </Stack>
                             
                             

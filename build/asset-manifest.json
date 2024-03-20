@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c8ca3da.css",
-    "main.js": "/static/js/main.8f5e120c.js",
+    "main.css": "/static/css/main.1e3e0639.css",
+    "main.js": "/static/js/main.752e68b8.js",
     "static/js/787.7c8b606e.chunk.js": "/static/js/787.7c8b606e.chunk.js",
+    "static/media/dylannew.png": "/static/media/dylannew.00b15645bc10f96e08ed.png",
     "static/media/step1.png": "/static/media/step1.abe8249621a7a9ea4a59.png",
     "static/media/step2.png": "/static/media/step2.9a5b9d2e8fb62abefb76.png",
     "static/media/Rectangle 20.png": "/static/media/Rectangle 20.a15dece42720d102142b.png",
     "static/media/Rectangle 21.png": "/static/media/Rectangle 21.7d2a4af7d54a5d5fa4c7.png",
     "static/media/Rectangle 19.png": "/static/media/Rectangle 19.476acab348d809e31ff9.png",
-    "static/media/person_image.png": "/static/media/person_image.0790598422921e05e187.png",
     "static/media/Frame 67.png": "/static/media/Frame 67.71facd1aa1205cb0b3ab.png",
     "static/media/Frame 68.png": "/static/media/Frame 68.0e79e61ea7cd0f928969.png",
     "static/media/Frame 65.png": "/static/media/Frame 65.44593aaaa6cb558ad922.png",
@@ -20,14 +20,13 @@
     "static/media/Frame 63.png": "/static/media/Frame 63.e4c1cb9a7abda90afa22.png",
     "static/media/Frame 61.png": "/static/media/Frame 61.1903224fc20998d5faf9.png",
     "static/media/Frame 60.png": "/static/media/Frame 60.a3258a3e7e75b5da57fc.png",
-    "static/media/Group 1000002799 (1).png": "/static/media/Group 1000002799 (1).441c18e6b9a0d895a325.png",
+    "static/media/HHHLogoNoBG. (1).png": "/static/media/HHHLogoNoBG.7732ef7fd869a56dfe16 (1).7732ef7fd869a56dfe16.png",
     "static/media/remodelr.png": "/static/media/remodelr.03e12816db94d5028ad2.png",
     "static/media/Frame 59.png": "/static/media/Frame 59.cce5e3da1c2d2908c5ff.png",
     "static/media/adminbyby.png": "/static/media/adminbyby.0acbb6e4b18059d73c14.png",
     "static/media/Frame 114.png": "/static/media/Frame 114.774212ee85d94f53c2ed.png",
     "static/media/Frame 115.png": "/static/media/Frame 115.33f9772b1465e6cb5196.png",
     "static/media/logo_new.png": "/static/media/logo_new.2ebb3debf00cec885ec8.png",
-    "static/media/honestlogo.png": "/static/media/honestlogo.2e925db138b627463f87.png",
     "static/media/logout.png": "/static/media/logout.eb9fc376857d5c762560.png",
     "static/media/admin-clean.png": "/static/media/admin-clean.7a5a6659dab024b8eeb0.png",
     "static/media/back_profile.png": "/static/media/back_profile.5ec5b0f49d43bee41f5a.png",
@@ -36,12 +35,12 @@
     "static/media/leafnew.png": "/static/media/leafnew.ca41452b5c17e55226e7.png",
     "static/media/Frame 75.png": "/static/media/Frame 75.9eda8d76986c68387b03.png",
     "index.html": "/index.html",
-    "main.8c8ca3da.css.map": "/static/css/main.8c8ca3da.css.map",
-    "main.8f5e120c.js.map": "/static/js/main.8f5e120c.js.map",
+    "main.1e3e0639.css.map": "/static/css/main.1e3e0639.css.map",
+    "main.752e68b8.js.map": "/static/js/main.752e68b8.js.map",
     "787.7c8b606e.chunk.js.map": "/static/js/787.7c8b606e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c8ca3da.css",
-    "static/js/main.8f5e120c.js"
+    "static/css/main.1e3e0639.css",
+    "static/js/main.752e68b8.js"
   ]
 }

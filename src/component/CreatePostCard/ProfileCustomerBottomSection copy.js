@@ -22,9 +22,9 @@ const ProfileCustomerBottomSection = () => {
     const LogoutHandle = () => {
         localStorage.clear();
         handleClose()
-        // navigate('/')
-        // window.location.reload();
-        window.location.href = 'https://honesthomehub.com/';
+        navigate('/')
+        window.location.reload();
+        // window.location.href = 'https://honesthomehub.com/';
      }
      const [isOpen, setIsOpen] = useState(false);
      const openPopup = () => {

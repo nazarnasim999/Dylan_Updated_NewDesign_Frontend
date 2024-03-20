@@ -22,9 +22,9 @@ const ViewProfileBtn = () => {
 
         localStorage.clear();
         handleClose()
-        // navigate('/')
-        // window.location.reload();
-        window.location.href = 'https://honesthomehub.com/';
+        navigate('/')
+        window.location.reload();
+        // window.location.href = 'https://honesthomehub.com/';
     }
 
     return (
