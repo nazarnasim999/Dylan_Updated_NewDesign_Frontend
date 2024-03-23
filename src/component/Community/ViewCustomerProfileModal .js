@@ -83,7 +83,10 @@ export default function ViewCustomerProfileModal({ get_profile_data }) {
             <Grid item md={6} lg={6} sm={12} xs={12} className="classname285">
               <Stack className="classname286" px={2} flexDirection={'row'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }}>
                 <Stack sx={{ fontSize: 17, fontWeight: 1000, color: '#002758' }}>Name:</Stack>
-                <Stack sx={{ color: '#002758' }}>{get_profile_data?.userDetails?.Name}</Stack>
+                <Stack sx={{ color: '#002758' }}>{get_profile_data?.userDetails?.Name}
+                
+                
+                </Stack>
               </Stack>
             </Grid>
             <Grid item md={6} lg={6} sm={12} xs={12} className="classname287">
@@ -114,7 +117,13 @@ export default function ViewCustomerProfileModal({ get_profile_data }) {
           <Grid item md={8} lg={8} sm={12} xs={12} className="classname297">
             <Stack className="classname297" px={2} flexDirection={'row'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }}>
               <Stack sx={{ fontSize: 17, fontWeight: 1000, color: '#002758' }}>Details: </Stack>
-              <Stack sx={{ color: '#002758' }}>{get_profile_data.jobs?.details} </Stack>
+              <Stack sx={{ color: '#002758' }}>
+                
+                
+                {get_profile_data.jobs?.details} 
+              
+              
+              </Stack>
             </Stack>
           </Grid>
           <Grid item md={4} lg={4} sm={12} xs={12} className="classname298">
@@ -131,7 +140,15 @@ export default function ViewCustomerProfileModal({ get_profile_data }) {
               </Stack>
             ) : null}
           </Grid>
-          <Grid item md={12} lg={12} sm={12} xs={12} className="classname300">
+
+
+
+{get_profile_data.jobs?.amount===undefined ?
+
+  (<>
+  
+  
+  <Grid item md={12} lg={12} sm={12} xs={12} className="classname300">
             <Stack className="classname300" px={2} flexDirection={'row'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }}>
               <Stack sx={{ fontSize: 17, fontWeight: 1000, color: '#002758' }}>Availablity Date: </Stack>
               {get_profile_data.jobs.availablity_times.map((e) => {
@@ -172,6 +189,41 @@ export default function ViewCustomerProfileModal({ get_profile_data }) {
               ))}
             </Stack>
           </Grid>
+
+  
+  
+  </>)
+
+  :
+
+  (
+  
+  <Grid item md={12} lg={12} sm={12} xs={12} className="classname300">
+  <Stack className="classname300" px={2} flexDirection={'row'} alignItems={'center'} gap={1} ml={2} sx={{ mt: 2 }}>
+    <Stack sx={{ fontSize: 17, fontWeight: 1000, color: '#002758' }}>Availablity Date & Time: </Stack>
+    <Stack>
+
+    {get_profile_data.jobs?.amount}
+
+    </Stack>
+  </Stack>
+</Grid>
+  
+  
+  
+  
+  
+  
+  
+  
+  )
+
+
+  
+
+}
+
+
 
 
 

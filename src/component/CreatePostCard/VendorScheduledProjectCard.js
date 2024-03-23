@@ -39,9 +39,34 @@ const VendorScheduledProjectCard = () => {
         console.log('newest:', data);
         // Handle the response from the server (if needed)
     });
+
+
+
+    // useEffect(() => {
+    //     dispatch(get_vendor_schedule_async_service())
+    // }, [])
+
+
+
     useEffect(() => {
-        dispatch(get_vendor_schedule_async_service())
-    }, [])
+
+        dispatch(get_vendor_schedule_async_service());
+
+
+
+        const intervalId = setInterval(() => {
+            dispatch(get_vendor_schedule_async_service());
+        }, 180000); // 3 minutes * 60 seconds/minute * 1000 milliseconds/second
+
+        // Cleanup function to clear the interval
+        return () => clearInterval(intervalId);
+    }, [dispatch]); // Include dispatch in the dependency array to ensure it's updated correctly
+
+
+    
+
+
+
     // console.log("get_schedule_data", get_schedule_data);
     return (
         <div className="classname-440">

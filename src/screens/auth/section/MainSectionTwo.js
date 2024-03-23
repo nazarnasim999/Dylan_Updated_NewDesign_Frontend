@@ -25,15 +25,17 @@ const MainSectiontwo = () => {
     const [currentIndex, setCurrentIndex] = useState("Vendor");
     const tabsBtn = [
         {
+
+            TabName: 'Vendor',
+            Value: "Vendor"
             
 
 
-            TabName: 'Customer',
-            Value: "Customer"
+           
         },
         {
-            TabName: 'Vendor',
-            Value: "Vendor"
+            TabName: 'Customer',
+            Value: "Customer"
         },
         {
             TabName: 'Expert',
@@ -83,6 +85,9 @@ const MainSectiontwo = () => {
                         </div>
                         {
                             currentIndex === "Vendor" ? <TabSignUpVendor /> : currentIndex === "Customer" ? <TabSignUpCustomer /> : currentIndex === "Expert" ? <TabSignUpExpert /> : null
+
+
+                            // currentIndex === "Customer" ? <TabSignUpVendor /> : currentIndex === "Vendor" ? <TabSignUpCustomer /> : currentIndex === "Expert" ? <TabSignUpExpert /> : null
                         }
                         {/* <form className="form-1">
                             <div className="form-group-1">

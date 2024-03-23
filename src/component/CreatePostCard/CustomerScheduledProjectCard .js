@@ -133,14 +133,35 @@ const CustomerScheduledProjectCard = () => {
     // };
     
     
-    useEffect(() => {
-        if (res_vendor_schedule_status === asyncStatus.SUCCEEDED) {
-            dispatch(get_customer_schedule_async_service())
-            console.log(get_customer_schedule_async_service(),"sheduleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+    // useEffect(() => {
+    //     if (res_vendor_schedule_status === asyncStatus.SUCCEEDED) {
+    //         dispatch(get_customer_schedule_async_service())
+    //         console.log(get_customer_schedule_async_service(),"sheduleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
             
-        }
-    }, [, res_vendor_schedule_status])
-    console.log(get_customer_schedule_data,"DATATATATATATATATATATTSTSTSTSSSSSS")
+    //     }
+    // }, [, res_vendor_schedule_status])
+    // console.log(get_customer_schedule_data,"DATATATATATATATATATATTSTSTSTSSSSSS")
+
+
+
+
+    useEffect(() => {
+
+        dispatch(get_customer_schedule_async_service());
+
+
+        const intervalId = setInterval(() => {
+            dispatch(get_customer_schedule_async_service());
+            console.log("Dispatching get_customer_schedule_async_service");
+        },  180000);
+
+        // Clear the interval when the component unmounts
+        return () => clearInterval(intervalId);
+    }, [dispatch]); // Include dispatch in the dependency array
+
+
+
+
 
 
     const [isOpen, setIsOpen] = useState(false);
