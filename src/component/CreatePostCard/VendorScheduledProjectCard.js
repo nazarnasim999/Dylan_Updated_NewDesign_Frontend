@@ -56,7 +56,7 @@ const VendorScheduledProjectCard = () => {
 
         const intervalId = setInterval(() => {
             dispatch(get_vendor_schedule_async_service());
-        }, 180000); // 3 minutes * 60 seconds/minute * 1000 milliseconds/second
+        }, 30000); // 3 minutes * 60 seconds/minute * 1000 milliseconds/second
 
         // Cleanup function to clear the interval
         return () => clearInterval(intervalId);

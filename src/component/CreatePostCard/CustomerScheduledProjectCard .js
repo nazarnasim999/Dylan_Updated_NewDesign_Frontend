@@ -153,7 +153,7 @@ const CustomerScheduledProjectCard = () => {
         const intervalId = setInterval(() => {
             dispatch(get_customer_schedule_async_service());
             console.log("Dispatching get_customer_schedule_async_service");
-        },  180000);
+        },  30000);
 
         // Clear the interval when the component unmounts
         return () => clearInterval(intervalId);

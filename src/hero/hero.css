@@ -1,3 +1,21 @@
+.panadoc {
+    position: absolute;
+    z-index: 999;
+    top: 350px;
+    width: 39%;
+    height: 488px;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.show {
+    display: block;
+}
+
+
+
 Marquee {
     background: linear-gradient(-135deg, #008ED9, #8B00DB);
     width: 85vw;
@@ -1752,6 +1770,16 @@ img.image_slider.unique-class-49 {
       
 
 @media screen and (max-width: 1600px){
+    div#form-container-ef719d73-0aec-4e1a-88c6-509933b68a2a {
+        height: 500px !important;
+    }
+
+    .panadoc {
+       
+        top: 275px;
+        
+    }
+    
 
 .logo-container-1 {
     font-size: 50px;
@@ -2009,6 +2037,13 @@ button.showpickedvendor {
 
 
 @media screen and (max-width: 1440px){
+
+    
+    .panadoc {
+       
+        top: 215px;
+        
+    }
     .logo-container-1 {
         font-size: 42px;
         padding: 15px 0px 15px 0px;
@@ -3832,7 +3867,10 @@ h5.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom.popup2222222.c
     height: 690px !important;
 }
 
-
+.panadoc {
+    top: 155px;
+    width: 90%;
+}
 
 
 

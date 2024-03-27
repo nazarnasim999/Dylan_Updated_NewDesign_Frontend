@@ -12,6 +12,9 @@ import { baseURL } from '../../../config/apiHandle/apiHandle'
 import { setVendorIdle } from '../../../store/slice/vendorSlice'
 import { user_color } from '../../../utils/color'
 import { create_vendor_async_service } from '../../../services/vendorService'
+import FormComponent from '../../auth/section/pandadoc'
+import { MultiImageUploadComponent } from '../../../component/uploadImage/MultiImagesUpload'
+import { SignupImageUploadComponent } from '../../../component/uploadImage/SignupImageUpload'
 const TabSignUpVendor = () => {
     const navigation = useNavigate()
     const dispatch = useDispatch()
@@ -45,7 +48,9 @@ const TabSignUpVendor = () => {
         }
     };
     const [data, setData] = useState({
-        selected_queries: null
+        selected_queries: null,
+        vendor_profile_picture:null,
+        driving_license:null
     });
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -95,6 +100,155 @@ const TabSignUpVendor = () => {
     React.useEffect(() => {
         setIsSubmitDisabled(!isFormValid());
     }, [selectedImage, data]);
+
+
+
+
+
+
+
+
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        const config = {
+            nodeId: 'form-container-ef719d73-0aec-4e1a-88c6-509933b68a2a',
+            width: '100%',
+            height: '700px',
+            url: 'https://eform.pandadoc.com/?eform=f5ad0b2b-26bb-4be3-abc5-5376ffe4451e',
+            events: {
+                loaded: function () {},
+                started: function (data) {
+                    if (data.started) {
+                        console.log('Form is filled.');
+                        setShow(false);
+                    } else {
+                        console.log('Form is not filled.');
+                    }
+
+                },
+                completed: function (data) {
+                    // Check if the form is filled
+                    if (data.completed) {
+                        console.log('Form is filled.');
+                    } else {
+                        console.log('COMPLETED.');
+                        setShow(false)
+                    }
+                },
+                exception: function (data) {}
+            },
+            data: {},
+        };
+
+        const dataQueryString = config.data ? Object.keys(config.data)
+            .map(function (key) {
+                return '&' + key + '=' + encodeURIComponent(JSON.stringify(config.data[key]));
+            })
+            .join('') : '';
+
+        const iframe = document.createElement('iframe');
+        iframe.frameBorder = 0;
+        iframe.src = config.url + dataQueryString;
+        if (config.nodeId) {
+            const node = document.getElementById(config.nodeId);
+            if (node) {
+                node.style.height = config.height;
+                node.style.width = config.width;
+                iframe.height = '100%';
+                iframe.width = '100%';
+                node.appendChild(iframe);
+            }
+        } else {
+            iframe.height = config.height;
+            iframe.width = config.width;
+            document.body.appendChild(iframe);
+        }
+
+        const eventMethod = window.addEventListener ? 'addEventListener' : 'attachEvent';
+        const messageEvent = eventMethod === 'attachEvent' ? 'onmessage' : 'message';
+
+        window[eventMethod](messageEvent, function (e) {
+            if (e && e.data && config && iframe && e.source === iframe.contentWindow) {
+                try {
+                    const message = JSON.parse(e.data);
+                    if (message && message.event) {
+                        const event = message.event.replace('embed.form.', '');
+                        const callback = config.events ? config.events[event] : null;
+                        if (callback) {
+                            callback(message.data);
+                        }
+                    }
+                } catch (e) {}
+            }
+        }, false);
+
+        // Clean up the iframe when component unmounts
+        return () => {
+            if (config.nodeId) {
+                const node = document.getElementById(config.nodeId);
+                if (node) {
+                    node.innerHTML = '';
+                }
+            } else {
+                document.body.removeChild(iframe);
+            }
+        };
+    }, []); // Empty dependency array to run effect only once
+
+
+    const [data1, setData1] = useState({
+        images: null,
+        Budget: null,
+        vendor_level: null,
+        availablity_times: null,
+        selected_queries: null,
+    
+        emergencyResponse: null,
+    
+        choose_service: null,
+    
+        // 
+        
+       
+    
+    
+      });
+
+
+
+    const handleSelectedImages = (value) => {
+
+        // setProgressValue(value.totalValue)
+        // setData({ ...data, images: value.images, })
+      };
+
+
+      const handleSelectedImages1 = (value) => {
+
+        // setProgressValue(value.totalValue)
+        // setData({ ...data, images: value.images, })
+
+        setData1({ ...data1, images: value.images, })
+        console.log(data1,"DATA1")
+      };
+
+
+      const handleServerResponse = (response) => {
+        // Handle the server response here
+        console.log('Server response vendor:', response.images[0]);
+        setData({...data,vendor_profile_picture:response.images[0]});
+    };
+
+    const handleServerResponse1 = (response) => {
+        // Handle the server response here
+        console.log('Server Driving License:', response.images[0]);
+        setData({...data,driving_license:response.images[0]});
+    };
+
+
+
+    
     return (
         <div>
             <div className="form-1">
@@ -107,6 +261,20 @@ const TabSignUpVendor = () => {
                         selectedImageHandle={selectedImageHandle}
                     /> */}
                 </div>
+
+
+                    <div>
+                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse1}/>
+                        Driving License
+                        </div>
+
+                        <div>
+                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse}/>
+                    Profile Picture
+                        </div>
+
+
+
                 <div className="form-group-1">
                     <input type="text" id="Name" name="name" placeholder="Name" required="" onChange={(e) =>
                         setData({ ...data, Name: e.target.value })
@@ -191,6 +359,19 @@ const TabSignUpVendor = () => {
                         }} className="form-submit-btn" type="submit"> Sign up </button>
                 </div>
             </div>
+
+                        {show &&
+                        <div className='panadoc'>
+                                
+                                
+                                {/* <FormComponent/> */}
+
+                                <div id='form-container-ef719d73-0aec-4e1a-88c6-509933b68a2a'></div>
+
+
+                        </div>
+}
+
         </div>
     )
 }
