@@ -179,16 +179,22 @@ const TabSignUpExpert = () => {
 
 
     return (
-        <div>
+        <div style={{
+         
+            width: '100%',
+            display: 'flex',
+            flexWrap:'wrap',
+            justifyContent:'space-evenly',
+        }}>
 
             
-<div>
+<div className='as-ki-bali'>
                     <SignupImageUploadComponent selectedImagesHandle={handleServerResponse1}/>
                     Driving License
 
                         </div>
 
-                        <div>
+                        <div className='as-ki-bali'>
                     <SignupImageUploadComponent selectedImagesHandle={handleServerResponse}/>
                     Profile Picture
                         </div>

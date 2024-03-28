@@ -1767,7 +1767,12 @@ img.image_slider.unique-class-49 {
       .MuiContainer-root.MuiContainer-maxWidthLg.footer-main.main-container.honest-150.css-1qsxih2 {
         max-width: 1600px !important;
     }
-      
+    .as-ki-bali {
+        font-weight: bold;
+        color: #01baf2;
+        text-align: center;
+        font-size: 20px;
+    } 
 
 @media screen and (max-width: 1600px){
     div#form-container-ef719d73-0aec-4e1a-88c6-509933b68a2a {
@@ -2034,6 +2039,33 @@ button.showpickedvendor {
     max-width: 1600px !important;
 }
   
+.classname-faqi-hold {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.MuiStack-root.cent.css-kqys85-MuiStack-root {
+    position: relative;
+}
+
+
+.classname-hsgd0 {
+    margin: 0px !important;
+}
+
+
+
+.classname-888 {
+    z-index: 999;
+}
+
+.classname-hrlodv {
+    margin: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
 
 
 @media screen and (max-width: 1440px){
@@ -2718,7 +2750,15 @@ input.inputStyle {
 
 
 
-
+    ol.carousel-indicators {
+        left: -18px;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        bottom: 58%;
+    }
 
 
 

@@ -251,10 +251,13 @@ const TabSignUpVendor = () => {
     
     return (
         <div>
-            <div className="form-1">
+            <div className="form-1" style={{
+                   justifyContent:'space-evenly',
+                }}>
                 <div style={{
                     textAlign: 'start',
-                    alignItems: 'flex-start'
+                    alignItems: 'flex-start',
+                    width: '100%'
                 }}>
                     {/* <Upload_image_component
                         selectedImage={selectedImage}
@@ -263,12 +266,12 @@ const TabSignUpVendor = () => {
                 </div>
 
 
-                    <div>
+                    <div className='as-ki-bali'>
                     <SignupImageUploadComponent selectedImagesHandle={handleServerResponse1}/>
                         Driving License
                         </div>
 
-                        <div>
+                        <div className='as-ki-bali'>
                     <SignupImageUploadComponent selectedImagesHandle={handleServerResponse}/>
                     Profile Picture
                         </div>

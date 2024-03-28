@@ -76,12 +76,12 @@ export const SignupImageUploadComponent = ({ selectedImagesHandle }) => {
     return (
 
         
-        <Stack sx={{ mt: "1px", mb: "20px" }} className="cent">
+        <Stack sx={{ mt: "1px", mb: "20px" }} className="cent  gogohhh" >
 
-<Stack>
-                <Stack flexDirection={"col"} alignItems={"center"}>
+<Stack  className="classname-888">
+                <Stack flexDirection={"col"} alignItems={"center"}  className="classname-7800">
                     {isImagePickerVisible &&
-                        <Stack
+                        <Stack  className="classname-hsgd0"
                             justifyContent="center"
                             alignItems="center"
                             sx={{
@@ -98,9 +98,9 @@ export const SignupImageUploadComponent = ({ selectedImagesHandle }) => {
                                 component="label"
                                 sx={{ width: "100%", height: "100%", color: "gray" }}
                             >
-                                <Stack>
+                                <Stack  className="classname-999">
                                     <IoAddSharp size={50} color="#989898" />
-                                </Stack>
+                                </Stack >
                                 <input
                                     onChange={handleImageSelect}
                                     type="file"
@@ -113,14 +113,14 @@ export const SignupImageUploadComponent = ({ selectedImagesHandle }) => {
                 </Stack>
                 </Stack>
                 {/* <Stack sx={{ color: "black", fontSize: { md: 20, lg: 20, sm: 15, xs: 8 } , fontWeight:"bold", textAlign:'center'}} mt={3}>Upload an Image's</Stack> */}
-            <Stack
+            <Stack  className="classname-faqi-hold"
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="center"
                 flexWrap="wrap"
             >
                 {selectedImages.map((image, index) => (
-                    <Stack
+                    <Stack  className="classname-hrlodv"
                         key={index}
                         justifyContent="center"
                         alignItems="center"
