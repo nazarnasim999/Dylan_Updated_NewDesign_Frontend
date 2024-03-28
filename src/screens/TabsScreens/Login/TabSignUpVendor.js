@@ -108,7 +108,7 @@ const TabSignUpVendor = () => {
 
 
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     useEffect(() => {
         const config = {
