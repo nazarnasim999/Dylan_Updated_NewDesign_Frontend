@@ -41,6 +41,8 @@ export default function Select_selected_queries({ setSelect_Queries, option_Firs
 
           <MenuItem value={"Landscaping"}>Landscaping</MenuItem>
           <MenuItem value={"Cleaning"}>Cleaning</MenuItem>
+          <MenuItem value={"Fencing"}>Fencing</MenuItem>
+          <MenuItem value={"Handyman"}>Handyman</MenuItem>
         </Select>
       </FormControl>
     </div>

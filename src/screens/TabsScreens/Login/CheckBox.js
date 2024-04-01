@@ -12,7 +12,15 @@ const CheckboxList = ({set_selected_queries}) => {
 
         { label: 'Landscaping', value: 'Landscaping' },
         { label: 'Cleaning', value: 'Cleaning' },
+
+
+        { label: 'Fencing', value: 'Fencing' },
+        { label: 'Handyman', value: 'Handyman' },
+
     ];
+
+
+
 
     const [checkboxes, setCheckboxes] = useState(initialCheckboxes);
     const [selectedValues, setSelectedValues] = useState([]);

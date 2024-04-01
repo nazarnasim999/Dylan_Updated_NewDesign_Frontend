@@ -14,6 +14,13 @@
     display: block;
 }
 
+.MuiStack-root.license.css-15hh44n-MuiStack-root {
+    height: 150px;
+    display: flex;
+    flex-direction: row !important;
+    /* border: 20px solid black; */
+}
+
 
 
 Marquee {
@@ -1167,7 +1174,7 @@ ol.carousel-indicators {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+   
     justify-content: space-between;
     gap: 25px;
 }

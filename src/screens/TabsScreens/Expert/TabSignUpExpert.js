@@ -10,6 +10,7 @@ import CheckboxList from '../Login/CheckBox'
 import FormComponent from '../../auth/section/pandadoc'
 import { MultiImageUploadComponent } from '../../../component/uploadImage/MultiImagesUpload'
 import { SignupImageUploadComponent } from '../../../component/uploadImage/SignupImageUpload'
+import { License_Upload } from '../../../component/uploadImage/LicenseUpload'
 const TabSignUpExpert = () => {
     const dispatch = useDispatch()
     const navigation = useNavigate()
@@ -189,14 +190,16 @@ const TabSignUpExpert = () => {
 
             
 <div className='as-ki-bali'>
-                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse1}/>
-                    Driving License
+                        Driving License (Front & Back)
+                    <License_Upload selectedImagesHandle={handleServerResponse1}/>
+                     
 
                         </div>
 
                         <div className='as-ki-bali'>
-                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse}/>
-                    Profile Picture
+                        Selfie
+                    <License_Upload selectedImagesHandle={handleServerResponse}/>
+                   
                         </div>
 
 

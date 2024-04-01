@@ -15,6 +15,7 @@ import { create_vendor_async_service } from '../../../services/vendorService'
 import FormComponent from '../../auth/section/pandadoc'
 import { MultiImageUploadComponent } from '../../../component/uploadImage/MultiImagesUpload'
 import { SignupImageUploadComponent } from '../../../component/uploadImage/SignupImageUpload'
+import { License_Upload } from '../../../component/uploadImage/LicenseUpload'
 const TabSignUpVendor = () => {
     const navigation = useNavigate()
     const dispatch = useDispatch()
@@ -266,14 +267,21 @@ const TabSignUpVendor = () => {
                 </div>
 
 
-                    <div className='as-ki-bali'>
-                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse1}/>
-                        Driving License
+                <div className='as-ki-bali'>
+                        Driving License (Front & Back)
+                    <License_Upload selectedImagesHandle={handleServerResponse1}/>
+                     
+
                         </div>
 
+           
                         <div className='as-ki-bali'>
-                    <SignupImageUploadComponent selectedImagesHandle={handleServerResponse}/>
-                    Profile Picture
+                        Selfie
+                        
+
+                    <License_Upload selectedImagesHandle={handleServerResponse}/>
+                    
+                   
                         </div>
 
 
