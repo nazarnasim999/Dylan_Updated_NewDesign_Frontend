@@ -48,7 +48,8 @@ export default function CreateGigModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [data, setData] = useState({
-    keywords: null
+    keywords: null,
+    travelling_cost:null
   });
   const [selectedImage, setSelectedImage] = useState("");
   const [communityData, setCommunityData] = useState({});
@@ -217,6 +218,27 @@ export default function CreateGigModal() {
                                 }}
                             />
                         </Grid>
+
+
+                        <Grid md={12} lg={12} sm={12} xs={12} mb={2} className="class-210">
+                            <Input
+                                name="travellingcost"
+                                onChange={(e) => setData({ ...data, travelling_cost: e.target.value })}
+                                style={{
+                                    padding: "10px 10px",
+                                    borderBottomLeftRadius: "7px",
+                                    borderTopLeftRadius: "7px",
+                                    border: "none",
+                                    borderBottom: "2px solid #1AC1F3",
+                                    outline: "none",
+                                }}
+                                label="Travelling Cost"
+                            />
+                        </Grid>
+
+
+
+
                     </Grid>
                     <Grid container className="class-212">
                         <Grid md={12} lg={12} sm={12} xs={12} mt={7} className="class-213">

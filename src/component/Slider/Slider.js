@@ -105,6 +105,7 @@ try {
                   <Stack flex={1}>
                     <Stack sx={{ fontSize: { md: 30, lg: 38, sm: 25, xs: 20 }, color: '#002758', fontWeight: 1000, textAlign: 'start' }}>{e.gig_title}</Stack>
                     <Stack mt={1} mb={1} sx={{ fontSize: { md: 14, lg: 18, sm: 15, xs: 13, color: '#002758', textAlign: 'start' } }}>{e.gig_discription}</Stack>
+                    <Stack mt={1} mb={1} sx={{ fontSize: { md: 14, lg: 18, sm: 15, xs: 13, color: '#002758', textAlign: 'start' } }}>Travelling Cost: {e.travelling_cost}</Stack>
                   </Stack>
                   <Stack sx={{ mt: { xl: 7, lg: 0, md: 0, sm: 0, xs: 0 } }} >
                     <Stack flexDirection={'row'} alignItems={'center'} gap={0.5} >

@@ -22,7 +22,7 @@
     flex: unset !important;
     height: 100%;
     color: #FFF;
-    font-family: Rajdhani;
+    font-family: Urbanist;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -47,7 +47,7 @@
     .footer-main .footer_heading.vstack {
         color: #fff;
         flex: initial !important;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 26px;
         font-style: normal;
         font-weight: 600;

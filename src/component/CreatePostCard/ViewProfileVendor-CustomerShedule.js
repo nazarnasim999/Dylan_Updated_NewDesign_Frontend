@@ -40,6 +40,7 @@ export default function ViewVendorProfile({ get_profile_data, vendorID }) {
   const [gigdescription, setgigdescription] = useState(null)
   const [gigimage, setgigimage] = useState('')
   const [gigtitle, setgigtitle] = useState('')
+  const [travelling_cost, settravelling_cost] = useState('')
 //   const vendorId = get_profile_data.VendorInfo._id;
   useEffect(() => {
       const formData = {
@@ -53,6 +54,7 @@ export default function ViewVendorProfile({ get_profile_data, vendorID }) {
               setgigdescription(response.data.gig_discription)
               setgigtitle(response.data.gig_title)
               setgigimage(response.data.gig_image)
+              settravelling_cost(response.data.travelling_cost)
               console.log(gigdescription,gigimage,gigtitle,"PROFILETS");
           })
           .catch(error => {
@@ -71,15 +73,36 @@ export default function ViewVendorProfile({ get_profile_data, vendorID }) {
       }}>View Details1 </Stack> */}
     <Stack
       onClick={viewProfile}
+    
+
       style={{
-        textDecoration: 'underline',
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#0D3B7A',
-      }}
+        // textDecoration: 'underline',
+        // fontSize: 18,
+        // fontWeight: 'bold',
+        // color: '#0D3B7A',
+    
+        width: '100%', // Corrected
+        borderRadius: '5px', // Added quotes
+        background: '#1AC1F3',
+        boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
+        border: '1px solid #1ac1f3', // Changed the color format to lowercase
+        color: '#FFF',
+        fontFamily: 'sans-serif',
+        fontSize: '16px', // Added quotes
+        fontStyle: 'normal',
+        fontWeight: '400', // Added quotes
+        lineHeight: 'normal',
+        padding: '6px', // Added quotes and semicolon,
+        width:'100px',
+        textAlign:'center'
+
+    }}
+    
+
+
       className="classname3031"
     >
-      View Profile
+      View
     </Stack>
     <Modal
       disableScrollLock
@@ -179,6 +202,11 @@ export default function ViewVendorProfile({ get_profile_data, vendorID }) {
               <div className="ibrar-janu">
                 <Stack sx={{ fontSize: 22, fontWeight: 1000, color: '#002758' }} className="ibrar7"> Description: </Stack>
                 <Stack sx={{ color: '#002758' }} className="ibrar7">{gigdescription}</Stack>
+              </div>
+
+              <div className="ibrar-janu">
+                <Stack sx={{ fontSize: 22, fontWeight: 1000, color: '#002758' }} className="ibrar7"> Travelling Cost: </Stack>
+                <Stack sx={{ color: '#002758' }} className="ibrar7">{travelling_cost}</Stack>
               </div>
             </div>
             <Stack flexDirection={'col'} px={2} mt={3} ml={2}>

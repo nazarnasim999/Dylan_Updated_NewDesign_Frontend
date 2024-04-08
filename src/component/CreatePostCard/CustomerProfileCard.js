@@ -23,6 +23,7 @@ import { Class } from "@mui/icons-material";
 // import MatchingLeadsVendor from '../CreatePostCard/MatchingLeadsVendor';
 // src\assets\settingicon.png
 import logosmall from '../../../src/assets/new/logo1.png'
+import ProfileCustomerBottomSectionNew from "./Profile_bottom_section_new_design";
 const CustomerProfileCard = () => {
   const theme = useTheme();
   const dispatch = useDispatch()
@@ -205,8 +206,11 @@ useEffect(() => {
                 bottom: { lg: -55, sm: -20, xs: -18, md: -70 },
                 left: 20,
               }} className="classname-434" style={{ width: "100%" }}>
+
+
                 <Stack  className="nazar bhai"     flexDirection={'column'} alignItems={'end'} style={{ width: '100%' }}>
-                    <Stack className="classname-435" style={{ width: '24.5%', backgroundColor: 'white', paddingTop: '25px', paddingLeft: '10px', paddingBottom: '0px', borderRadius: '15px' }}>
+                  
+                    {/* <Stack className="classname-435" style={{ width: '24.5%', backgroundColor: 'white', paddingTop: '25px', paddingLeft: '10px', paddingBottom: '0px', borderRadius: '15px' }}>
                         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                             <Avatar
                                 alt="Remy Sharp"
@@ -220,7 +224,7 @@ useEffect(() => {
                             <Stack flexDirection={"column"}>
                                 <span className="classname-436" style={{ paddingLeft: '20px', fontWeight: 'bold', fontSize: '40px' }}>
                                   
-                                  {/* {customer_profile_data?.Name} */}
+                                
                                   {split_firstname}
                                 
                                 </span>
@@ -230,10 +234,7 @@ useEffect(() => {
                         <Stack className="classname-438" flexDirection={'row'} justifyContent={'end'}>
                             <ChangeSetting userInfo={userInfo} />
                         </Stack>
-              {/* <Upload_image_component
-                        selectedImage={selectedImage}
-                        // selectedImageHandle={selectedImageHandle}
-                    /> */}
+           
                         <input
                             type="file"
                             id="fileInput"
@@ -248,12 +249,16 @@ useEffect(() => {
                                               </IconButton>
                                       </label>
                         </div>
-                    </Stack>
+                    </Stack> */}
+
+
+
                 </Stack>
             </Stack>
         </Stack>
         <Stack className="classname-439" style={{ paddingTop: '10px' }}>
-            <ProfileCustomerBottomSection />
+            {/* <ProfileCustomerBottomSection /> */}
+            <ProfileCustomerBottomSectionNew />
         </Stack>
     </Stack>
 </>

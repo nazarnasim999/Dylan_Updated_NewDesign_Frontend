@@ -29,6 +29,9 @@ import VerifyOtpPassworde from "../screens/auth/verifyOtp/VerifyOtpPassworde";
 import ResetPassworde from "../screens/auth/resetPassword/resetPassworde";
 import ResetPasswordv from "../screens/auth/resetPassword/resetPasswordv";
 import FiveStarRating from "../component/Community/Rating";
+import Steps from "../component/CreatePostCard/Steps";
+import ShowAllVendors from "../Dylan_Admin_Portal/ShowAllVendors";
+import Customer_Vendor from "../Dylan_Admin_Portal/View_Customer_Vendor_Job_details";
 
 export const main_routes = [
   // {
@@ -74,6 +77,35 @@ export const main_routes = [
     element: <FiveStarRating />,
     auth_required: false,
   },
+
+  {
+    caption: "steps",
+    linkTo: "/steps/:id",
+    element: <Steps />,
+    auth_required: false,
+  },
+
+
+
+
+
+  {
+    caption: "total_vendors",
+    linkTo: "/totalvendors",
+    element: <ShowAllVendors />,
+    auth_required: false,
+  },
+
+
+  {
+    caption: "total_vendors",
+    linkTo: "/Customer_Vendor_Job_Details/:id",
+    element: <Customer_Vendor />,
+    auth_required: false,
+  },
+
+
+
 
 
 

@@ -33,9 +33,9 @@ export const baseURL = `${api_url}`;
 // https://honesthome-backend-6d8f37871a1b.herokuapp.com
 
 
-export  const socket = SocketIOClient('https://honesthome-backend-6d8f37871a1b.herokuapp.com');
-
 // export  const socket = SocketIOClient('https://honesthome-backend-6d8f37871a1b.herokuapp.com');
+
+export  const socket = SocketIOClient('https://dilannazartsbackendtest-production.up.railway.app');
 
 
 // export  const socket = SocketIOClient('http://localhost:5000');

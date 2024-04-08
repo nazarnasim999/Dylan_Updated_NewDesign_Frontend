@@ -1,3 +1,1144 @@
+/* new steps */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sh-card {width: 353px;border-radius: 10px;background: #FFF;box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);}
+
+.sh-box-1 {
+    width: 100%;
+    padding: 20px;
+}
+
+.sh-list-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.sh-list-1 img {
+    width: 32%;
+}
+
+.sh-list-1 span {
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.sh-list-1 span h2 {
+    color: #002758;
+    font-family: Urbanist ,sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sh-list-1 span  h3 {
+    color: #01BAF2;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sh-list-1 span button {
+    width: 100%;
+    border-radius: 5px;
+    background: #1AC1F3;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #1ac1f3;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 6px;
+}
+
+.sh-list-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0px 5px 0px;
+}
+
+.sh-list-2 span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sh-list-2 p {
+    color: #002758;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+}
+
+.sh-list-2 span p {
+    font-weight: 400 !important;
+}
+
+.sh-list-2 span svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sh-box-1 p {
+    color: rgba(0, 39, 88, 0.90);
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sh-box-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+.sh-box-2 button {
+    width: 50%;
+    border-radius: 5px 0px 0px 5px;
+    background-color:  #1AC1F3;
+    border: 1px solid #1ac1f3;
+    padding: 4px;
+}
+
+button.error {
+    border-radius: 0px 5px 5px 0px !important;
+    background-color: transparent !important;
+}
+
+.sh-box-2 button svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+
+
+
+.multi-form {
+    width: 100%;
+}
+
+.contanir {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.main-multi {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-multi button {
+    background-color: #979797;
+    border-radius: 50px;
+    border: 1px solid #979797;
+    padding: 20px 22px;
+}
+
+button {}
+
+* {
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main-multi span {
+    text-align: center;
+    width: 13%;
+}
+
+.main-multi span p {
+    color: #002758;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 111.111% */
+    padding: 8px 0px;
+    border-bottom: 2px solid #979797;
+}
+label.unique-class-9090 {
+    width: 100%;
+}
+
+.popup-my {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+.main-ts-popup {
+
+
+    width: 64%;
+}
+
+.tab {
+    width: 100%;
+    background-color: #002758;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 18px;
+}
+
+.tab button {
+    border-radius: 60px 60px 0px 0px;
+    background: transparent;
+    padding: 23px 55px;
+    color: #fff;
+    font-family: Urbanist  ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+
+.tab {
+    overflow: hidden;
+  }
+  
+  /* Style the buttons inside the tab */
+
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #fff;
+    color: #002758;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #fff;
+    color: #002758;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+  display: none;
+  }
+
+  .go-dady {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 54px 5%;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.number-in {
+    width: 57%;
+}
+
+.date-in {
+    width: 12%;
+}
+
+.CVC-in {
+    width: 12%;
+}
+
+.go-dady input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #002758;
+    padding: 20px 0px;
+    color: rgba(51, 51, 51, 0.70);
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+}
+
+.lilli-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lilli-btn button {
+    color: #FFF;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 18%;
+    border-radius: 5px;
+    background: #01BAF2;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 0px;
+    border: 1px solid #01baf2;
+}
+
+
+
+
+
+
+.payment_container{
+
+    width: 1210px;
+    height: 89px;
+    flex-shrink: 0;
+    background: #002758;
+
+}
+
+
+
+.main-multi span h2 {
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 111.111% */
+    padding: 8px 0px;
+}
+
+button.Create {
+    border-radius: 12px !important;
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins ,sans-serif !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 500;
+    line-height: 23px !important;
+    /* 55.556% */
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px !important;
+}
+
+.bule button {
+    background-color: #002758 ;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 41.667% */
+    padding: 26px 24px;
+}
+
+.main-multi button svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+
+.grey-button{
+
+
+    background-color: grey !important;
+}
+
+
+
+.ahti69 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+section.pulilli {
+    width: 100%;
+    padding: 0px 2%;
+}
+
+.long-boxing {
+    width: 100%;
+    background-color: #1AC1F3;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxing-list-1 {
+    width: 25%;
+    background-color: #002758;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 23px 0px;
+}
+
+.boxing-list-1 h2 {
+    color: #FFF;
+    font-family: Poppins ,sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.boxing-list-1 p {
+    color: #979797;
+    font-family: Poppins ,sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 5px;
+}
+
+.boxing-list-3 {
+    width: 25%;
+    background-color: #002758;
+    border-radius: 0px 50px 50px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 32px 0px;
+}
+
+.boxing-list-3 button {
+    color: #FFF;
+    font-family: Poppins ,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    background: #1AC1F3;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    padding: 12px 42px 13px 42px;
+    border: 1px solid #1ac1f3;
+    outline: none;
+}
+
+button.Cancel {
+    background: #FF5954;
+    border: 1px solid #FF5954;
+}
+
+.boxing-list-2 {
+    width: 50%;
+    background-color: #1AC1F3;
+}
+
+.boxing-list-2 p {
+    color: #002758;
+    font-family: Poppins ,sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+
+
+.hover-yellow {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hover-yellow:hover,
+  .hover-yellow.active {
+    background-color: yellow;
+  }
+  
+
+/* 
+  .Review-Form {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+} */
+
+
+
+.Review-Form {
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
+    width: 30%;
+    padding: 30px;
+    border-radius: 21px;
+}
+
+.select-button button{
+
+    width: 100% !important;
+    
+}
+
+.Rating-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.Successful {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-Successful {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-Successful img {
+    width: 16%;
+}
+
+.main-Successful h2 {
+    color: #002758;
+    font-family: Urbanist ,sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 30px;
+}
+
+.main-Successful p {
+    color: #979797;
+    text-align: center;
+    font-family: Urbanist , sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 13px 0px 30px 0px;
+}
+
+.main-Successful button {
+    padding: 10px 85px 10px 85px;
+    border-radius: 5px;
+    background: #01BAF2;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #01baf2;
+    color: #FFF;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.order_id{
+
+    color: #002758;
+font-family: Urbanist;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+.Select_vendor hr{
+
+
+    border-bottom: 1px solid rgba(0, 39, 88, 0.90);
+
+}
+
+
+
+/* new stepls */
+
+
+
+/* dylan admin */
+
+section.Admin-Vendors {
+    width: 100%;
+    background-color:  #DEF7FF;
+    padding-top: 35px;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 100vh;
+}
+
+.main-Vendors {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Vendors-tital {
+    width: 100%;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 9px;
+}
+
+.Vendors-tital span {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.Vendors-tital h2 {
+    color: #01BAF2;
+    font-family: Urbanist, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
+}
+
+.Vendors-tital span h2 {
+    font-size: 30px;
+}
+
+.Vendors-tital span img {
+    width: 10%;
+}
+
+.Vendors-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    height: 75vh;
+    padding-right: 1%;
+}
+
+.Vendors-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0px;
+    border-bottom: 1px solid #002758;
+}
+
+.your-listing-tital {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.your-listing-tital span h2 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.your-listing-tital span h3 {
+    color: #01BAF2;
+    font-family: Urbanist ,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 5px;
+}
+
+.your-listing-tital img {
+    width: 14%;
+}
+
+.your-listing-btn button {
+    color: #FFF;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 5px;
+    background: #01BAF2;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #01baf2;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.your-listing-btn {
+    width: 11%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #D9D9D9;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #01BAF2; 
+    border-radius: 10px;
+        height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #14c6fc; 
+  }
+
+
+
+
+
+
+  
+section.ts-bhai {
+    width: 100%;
+    height: 100vh;
+    background-color: #DEF7FF;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-top: 45px;
+}
+
+.main-ts-bhai {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ts-bhai-box-1 {
+    width: 24%;
+    height: 95vh;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.ts-bhai-box {
+    width: 74%;
+}
+
+.ts-list-bhai-1 {
+    width: 100%;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.ts-list-bhai-1 h2 {
+    color: #01BAF2;
+    font-family: Urbanist ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ts-list-bhai-2 {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.ts-list-bhai-2 h3 {
+    color: #002758;
+    font-family: Urbanist ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0, 39, 88, 0.90);
+}
+
+.ts-list-bhai-3 {
+    width: 100%;
+    display: flex;
+    gap: 75px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    overflow-y: scroll;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.who-list-1 {
+    width: 75%;
+}
+
+.who-tital {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.who-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px solid #01BAF2;
+    background: #DEF7FF;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+}
+
+.who-box-tital {
+    width: 48%;
+}
+
+.who-box-imger {
+    width: 48%;
+}
+
+.who-box-imger img {
+    width: 100%;
+}
+
+.who-box-tital h2 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.who-box-tital p {
+    color: #000;
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 15px 0px;
+}
+
+.who-box-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.who-box-btn span {
+    width: 27%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.who-tital h2 {
+    color: #002758;
+    text-align: center;
+    font-family: Poppins ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.who-tital p {
+    color: rgba(0, 39, 88, 0.90);
+    font-family: Poppins ,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Vendor-id {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.Vendor-id span h2 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Vendor-id span p {
+    color: #01BAF2;
+    font-family: Urbanist , sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Vendor-id img {
+    width: 45%;
+}
+
+.Vendor-ul-boxer {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.Vendor-ul-boxer span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Vendor-ul-boxer span svg {
+    width: 24px;
+    height: 24px;
+}
+
+.Vendor-para {
+    width: 5%;
+}
+
+.Vendor-para h2 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.Vendor-para p {
+    color: #01BAF2;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+img.mm {
+    position: absolute;
+    left: 0px;
+    width: 10%;
+}
+
+
+.custumber-card {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #002758;
+}
+
+.cs-list-1 {
+    width: 100%;
+    padding: 14px 0px;
+    border-bottom: 1px solid #002758;
+}
+
+.cs-list-1 h2 {
+    color: #002758;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.cs-list2 {
+    width: 100%;
+    padding: 12px 20px 20px 20px;
+}
+
+.cs-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.cs-card-tital {
+    width: 44%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cs-card-tital img {
+    width: 38%;
+}
+
+.cs-card span h2 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cs-card span p {
+    color: #01BAF2;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cs-card-para {
+    width: 100%;
+    padding: 10px 0px 20px 0px;
+}
+
+.cs-card-para h2 {}
+
+.cs-card-para h3 {
+    color: #000;
+    font-family: Urbanist ,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cs-card-para p {
+    color: rgba(0, 39, 88, 0.90);
+    font-family: Poppins ,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cs-ul-li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cs-ul-li span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-family: Poppins ,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cs-ul-li span svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+/*  */
+
+
+
+
+
+
+
+
+
 .panadoc {
     position: absolute;
     z-index: 999;
@@ -122,7 +1263,7 @@ Marquee {
 
     .heading_landing_page h1 {
         color: #fff;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 67px;
         font-style: normal;
         font-weight: 600;
@@ -137,7 +1278,7 @@ Marquee {
     }
     .heading_landing_page h3, .hero_subtitle {
         color: #fff;
-        font-family: Rajdhani !important;
+        font-family: Urbanist !important;
     }
     
     
@@ -147,7 +1288,7 @@ Marquee {
         border: 2px solid #b22234;
         border-radius: 10px;
         display: flex;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 20px;
         font-weight: 700;
         justify-content: center;
@@ -262,7 +1403,7 @@ Marquee {
       
       .sec3 .our-titel.vstack {
         color: #002758;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 60px;
         font-style: normal;
         font-weight: 700;
@@ -283,7 +1424,7 @@ Marquee {
       
       .back_img_sec2.vstack .sec2_titel_heading.vstack {
         color: #002758;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 57px;
         font-style: normal;
         font-weight: 900;
@@ -294,7 +1435,7 @@ Marquee {
       
       .back_img_sec2.vstack .sec2-titel.vstack {
         color: #B22234;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
@@ -318,7 +1459,7 @@ Marquee {
         border: 2px solid #b22234;
         border-radius: 10px;
         display: flex;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 20px;
         font-weight: 700;
         justify-content: center;
@@ -363,7 +1504,7 @@ Marquee {
         flex: unset !important;
         height: 100%;
         color: #FFF;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 30px;
         font-style: normal;
         font-weight: 600;
@@ -882,7 +2023,7 @@ box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
 
 .customer_shedule7 {
     display: flex !important;
-    flex-direction: row !important;
+    /* flex-direction: row !important; */
 }
 
 /* .css-19r6kue-MuiContainer-root {
@@ -908,7 +2049,39 @@ box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
     padding-right: 0px !important;
     background-size: cover;
     /* background-size: 60%; */
+    height: 100vh;
 }
+
+
+.Main_Container_steps{
+
+    max-width: 100% !important;
+    background-image: url('../assets/leafnew.png');
+    
+    
+    background-color: #DEF7FF;
+    padding-right: 0px !important;
+    background-size: cover;
+    /* background-size: 60%; */
+    height: 100vh;
+
+}
+.CustomerCard {
+    /* top: 0px; */
+    padding-top: 70px;
+}
+
+.Select_vendor h1{
+
+    color: #002758;
+    font-family: Urbanist;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
 
 .leaf{
     background-image: url('../assets/leaf.png');
@@ -1066,7 +2239,7 @@ background: #01BAF2;
 }
 .customer_shedule7 {
     display: flex !important;
-    flex-direction: row !important;
+    /* flex-direction: row !important; */
 }
 /* .css-19r6kue-MuiContainer-root {
     max-width: 100% !important;
@@ -1472,7 +2645,7 @@ header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1.MuiAppBar-root.MuiAp
 
 .admin-card-body h3 {
     color: #FFF;
-    font-family: Rajdhani;
+    font-family: Urbanist;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -1481,7 +2654,7 @@ header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1.MuiAppBar-root.MuiAp
 
 .admin-card-body h2 {
     color: #FFF;
-    font-family: Rajdhani;
+    font-family: Urbanist;
     font-size: 70px;
     font-style: normal;
     font-weight: 600;
@@ -2277,7 +3450,7 @@ button.showpickedvendor {
     .footer-main .footer_heading.vstack {
         color: #fff;
         flex: initial !important;
-        font-family: Rajdhani;
+        font-family: Urbanist;
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
@@ -3843,7 +5016,7 @@ h5.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom.popup2222222.c
 
     color: #fff;
     padding-top: 25px;
-    font-family: Rajdhani;
+    font-family: Urbanist;
    
     font-style: normal;
     line-height: 0px;
@@ -3894,7 +5067,7 @@ h5.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom.popup2222222.c
 .footer-main .footer_heading.vstack {
     color: #fff;
     flex: initial !important;
-    font-family: Rajdhani;
+    font-family: Urbanist;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

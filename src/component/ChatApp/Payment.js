@@ -154,8 +154,8 @@ export function CheckoutForm({ get_schedule_data_nested, get_status_from_api ,s_
         <>
             <form onSubmit={handleSubmit} style={{ padding: '10px', width:'80%' }} className="unique-class-78">
                 {/* Add your additional fields here */}
-                <h2 style={{ marginBottom: '20px', color: "#002758", fontWeight: '600', fontFamily: 'Rajdhani', textAlign:'center', fontSize:'50px', letterSpacing:'1px' }} className="unique-class-79">Pay With Stripe</h2>
-                <label style={{ color: "#01BAF2", fontFamily: 'Rajdhani', fontSize:'20px', fontWeight:'600' }} className="unique-class-80">
+                <h2 style={{ marginBottom: '20px', color: "#002758", fontWeight: '600', fontFamily: 'Urbanist', textAlign:'center', fontSize:'50px', letterSpacing:'1px' }} className="unique-class-79">Pay With Stripe</h2>
+                <label style={{ color: "#01BAF2", fontFamily: 'Urbanist', fontSize:'20px', fontWeight:'600' }} className="unique-class-80">
                     Enter Card Details
                     <CardElement className="unique-class-81" />
                 </label>

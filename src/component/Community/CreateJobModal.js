@@ -72,6 +72,8 @@ export default function CreateJobModal() {
 
     choose_service: null,
 
+    phase: "Job Created"
+
     // 
     
    

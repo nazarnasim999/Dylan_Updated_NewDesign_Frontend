@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-const FiveStarRating = ({C_ID,V_ID, J_ID, S_ID}) => {
+import { baseURL } from '../../config/apiHandle/apiHandle';
+const FiveStarRating = ({ J_ID,selected_schedule_id}) => {
   const [rating, setRating] = useState(0);
   const [review, setreview]= useState('')
   useEffect(() => {
@@ -16,13 +17,13 @@ const FiveStarRating = ({C_ID,V_ID, J_ID, S_ID}) => {
     const formData = {
         review:review,
         rating:rating,
-        CustomerId:C_ID,
-        VendorId: V_ID,
+        
         JobId: J_ID,
-        SheduleId: S_ID
+        selected_schedule_id:selected_schedule_id
+        
     }
     console.log(formData,"FORM DATA")
-    axios.post ('https://honesthome-backend-6d8f37871a1b.herokuapp.com/customer_review',formData)
+    axios.post (`${baseURL}/customer_review`,formData)
     .then((res)=>{
         console.log(res.data.message,"REVIEW")
         if(res.data.message=='Review Posted Successfully')
@@ -33,7 +34,10 @@ const FiveStarRating = ({C_ID,V_ID, J_ID, S_ID}) => {
     })
   }
   return (
-    <div className='Review-Form'>
+
+    <div className='Rating-form'>
+
+    <div className='Review-Form' style={{backgroundColor:"white"}}>
       <h1 style={{color:'#002758'}}>How was your Experience?</h1>
       {/* <textarea onChange={(e)=>{setreview(e.target.value)}}  >
 </textarea> */}
@@ -63,12 +67,13 @@ justifyContent:'center'
   </form>
   </div>
     </div>
+    </div>
   );
 };
 const Star = ({ filled, onClick }) => {
   return (
    <div className='Stars'>
-    <span style={{ cursor: 'pointer', color:filled?'orange':'gray' , fontSize:'60px' }} onClick={onClick}>
+    <span style={{ cursor: 'pointer', color:filled?'#01BAF2':'gray' , fontSize:'60px' }} onClick={onClick}>
       {filled ? '★' : '☆'}
     </span>
    </div>
