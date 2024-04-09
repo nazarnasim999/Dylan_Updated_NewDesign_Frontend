@@ -116,7 +116,7 @@ const ActiveJobsUpdated = () => {
     return (
         < div className='pheku-chand'>
             {get_job_byId_data?.map((e, i) => (
-                <Stack key={i} mt={1} className=''>
+                <Stack key={i} mt={1} className='active-boxes-divs'>
                        <div>
                        <section class="pulilli">
         <div class="long-boxing">

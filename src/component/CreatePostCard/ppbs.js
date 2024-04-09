@@ -15,7 +15,7 @@ import ShowPickedVendor from './ShowPickedVendor';
 import cross from '../../../src/assets/new/icons8-multiply-48.png'
 import Steps from './Steps';
 import ActiveJobsUpdated from '../ChatApp/Active_Jobs_updated';
-const ProfileCustomerBottomSectionNew = () => {
+const PPBS = ({order_id}) => {
     const navigate = useNavigate()
     const [anchorEl, setAnchorEl] = useState(null);
     const handleClose = () => {
@@ -61,6 +61,10 @@ const ProfileCustomerBottomSectionNew = () => {
                     <Helpful />
                     <img src={logout} className="setting-button" style={{ width: '5%' }} onClick={LogoutHandle} />
                         </div>
+
+                        <div className='order_id'>
+                Order_Id:{order_id}
+              </div>
                 </Stack>
               
              
@@ -126,11 +130,11 @@ const ProfileCustomerBottomSectionNew = () => {
 
 
 
-<ActiveJobsUpdated/>
+{/* <ActiveJobsUpdated/> */}
 
 {/* <Steps/> */}
 
 </div>
     )
 }
-export default ProfileCustomerBottomSectionNew
+export default PPBS

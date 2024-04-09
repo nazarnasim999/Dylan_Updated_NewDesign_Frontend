@@ -24,6 +24,7 @@ import { Class } from "@mui/icons-material";
 // src\assets\settingicon.png
 import logosmall from '../../../src/assets/new/logo1.png'
 import ProfileCustomerBottomSectionNew from "./Profile_bottom_section_new_design";
+import { Container } from "react-bootstrap";
 const CustomerProfileCard = () => {
   const theme = useTheme();
   const dispatch = useDispatch()
@@ -182,6 +183,7 @@ useEffect(() => {
   return (
     <>
     <Stack className="classname-430 Customer-Dashboard">
+      <div className="container-boxes">
         <Stack sx={{ position: 'relative' }}>
             <div className="classname-431 small_logo">
                 <img src={logosmall} style={{ width: '5%' }} />
@@ -260,6 +262,7 @@ useEffect(() => {
             {/* <ProfileCustomerBottomSection /> */}
             <ProfileCustomerBottomSectionNew />
         </Stack>
+        </div>
     </Stack>
 </>
   );

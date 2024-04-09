@@ -25,6 +25,7 @@ import { Class } from "@mui/icons-material";
 import logosmall from '../../../src/assets/new/logo1.png'
 import ProfileCustomerBottomSectionNew from "./Profile_bottom_section_new_design";
 import ProfileCustomerBottomSectionNewjs from "./Profile_bottom_section_steps";
+import PPBS from "./ppbs";
 const CustomerProfileCard2 = ({order_id}) => {
   const theme = useTheme();
   const dispatch = useDispatch()
@@ -260,7 +261,9 @@ useEffect(() => {
         <Stack className="classname-439" style={{ paddingTop: '10px' }}>
             {/* <ProfileCustomerBottomSection /> */}
             {/* <ProfileCustomerBottomSectionNew /> */}
-            <ProfileCustomerBottomSectionNewjs  order_id={order_id}/>
+            {/* <ProfileCustomerBottomSectionNewjs  order_id={order_id}/> */}
+            <PPBS order_id={order_id}/>
+            {/* <ProfileCustomerBottomSectionNew/> */}
         </Stack>
     </Stack>
 </>

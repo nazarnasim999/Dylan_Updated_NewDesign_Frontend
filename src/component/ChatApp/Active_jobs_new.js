@@ -78,10 +78,10 @@ const ActiveJobsNew = ({job_id}) => {
 
 
                 // <Stack key={i} mt={1} className='user_details unique-class-1'>
-                    <Stack key={i} mt={1} >
+                    <Stack key={i} mt={1} className='main-active-jobss' >
 
                 {e._id===job_id &&
-
+                
                         <div className='user_details unique-class-1'>
                         
 
