@@ -32,6 +32,8 @@ import FiveStarRating from "../component/Community/Rating";
 import Steps from "../component/CreatePostCard/Steps";
 import ShowAllVendors from "../Dylan_Admin_Portal/ShowAllVendors";
 import Customer_Vendor from "../Dylan_Admin_Portal/View_Customer_Vendor_Job_details";
+import Dylan_Dashboard from "../Dylan_Admin_Portal/Dylan_Dashboard";
+import ShowAllJobs from "../Dylan_Admin_Portal/Show_All_Jobs";
 
 export const main_routes = [
   // {
@@ -99,8 +101,33 @@ export const main_routes = [
 
   {
     caption: "total_vendors",
-    linkTo: "/Customer_Vendor_Job_Details/:id",
+    linkTo: "/customer_vendor/:id",
     element: <Customer_Vendor />,
+    auth_required: false,
+  },
+
+
+
+  
+  {
+    caption: "total_vendors",
+    linkTo: "/showalljobs",
+    element: <ShowAllJobs />,
+    auth_required: false,
+  },
+
+
+
+
+
+
+
+
+
+  {
+    caption: "Dylan_Dashbaord",
+    linkTo: "/honest_dashboard",
+    element: <Dylan_Dashboard />,
     auth_required: false,
   },
 
